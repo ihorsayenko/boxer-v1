@@ -1,0 +1,74 @@
+<section id="packageGallery">
+    <div class="container">
+        <div class="packages_wrapper">
+            <div class="package_tabs">
+                <ul class="nav nav-tabs jura_bold">
+                    <li role="presentation" class="active"><a class="" href="#boxes" data-toggle="tab">коробки</a></li>
+                    <li role="presentation" class=""><a class="" href="#locksAndShelves" data-toggle="tab">замки/стелажі</a></li>
+                    <li role="presentation" class=""><a class="" href="#packages" data-toggle="tab">плівки/пакети</a></li>
+                    <li role="presentation" class=""><a class="" href="#others" data-toggle="tab">інші матеріали</a></li>
+                </ul>
+
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id='boxes'>
+                        <div class="container_flex">
+                            <div class="thumbnail flex_item" [id]='item.id' *ngFor="let item of boxes;">
+                                <img class="img-responsive package_img" [src]="item.imgSrc" alt="">
+                                <div class="caption text-center">
+                                    <ul class="package_desc">
+                                        <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                                            {{desc}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id='locksAndShelves'>
+                        <div class="container_flex">
+                            <div class="thumbnail flex_item" [id]='item.id' *ngFor="let item of locksAndShelves;">
+                                <img class="img-responsive package_img" [src]="item.imgSrc" alt="">
+                                <div class="caption text-center">
+                                    <ul class="package_desc">
+                                        <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                                            {{desc}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id='packages'>
+
+                        <div class="container_flex">
+                            <div class="thumbnail flex_item" [id]='item.id' *ngFor="let item of packages;">
+                                <img class="img-responsive package_img" [src]="item.imgSrc" alt="">
+                                <div class="caption text-center">
+                                    <ul class="package_desc">
+                                        <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                                            {{desc}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id='others'>
+                        <div class="container_flex">
+                            <div class="thumbnail flex_item" [id]='item.id' *ngFor="let item of others;">
+                                <img class="img-responsive package_img" [src]="item.imgSrc" alt="">
+                                <div class="caption text-center">
+                                    <ul class="package_desc">
+                                        <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                                            {{desc}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

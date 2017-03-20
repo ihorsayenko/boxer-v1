@@ -1,0 +1,31 @@
+<section id='questionAnswerId'>
+    <div class="container">
+        <div class="row text-center title_text furore_regular">
+            Питання та відповіді щодо зберігання та оренди боксів на складі КОМОРА
+        </div>
+        <div class="row table_secton">
+            <ul class="list-group">
+                <li [id]='i' class="list-group-item" [ngClass]="openItemId == i && isOpen ? 'full_box': ''" *ngFor='let item of Items; let i = index;'>
+                    <div class="row">
+                        <div class="col-md-1 text-center">
+                            <span class="badge"><span>{{item.Id}}</span></span>
+                        </div>
+                        <div class="col-md-10">
+                            <div class="row">
+                                <span>{{item.Question}}</span>
+                            </div>
+                            <div class="row answer_wrapper">
+                                <div [id]='i' class="answer" [ngClass]="openItemId == i  && isOpen ? '': 'hide'">
+                                    {{item.Answer}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                            <span id="toggle" (click)="toggle(i)" [ngClass]="openItemId == i  && isOpen ? 'glyphicon glyphicon-chevron-up' : 'glyphicon glyphicon-chevron-down'"> </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

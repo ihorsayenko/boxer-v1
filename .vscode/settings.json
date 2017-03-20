@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.map": true,
+        "**/*.js": true,
+        "**/*node_modules": true
+    },
+    "editor.minimap.enabled": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSave": false,
+    "vsicons.presets.angular": true
+}
