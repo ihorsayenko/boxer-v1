@@ -26,10 +26,6 @@ import { CommonService } from './common.service';
         HttpModule,
         JsonpModule,
         RouterModule.forRoot([
-            // {
-            //     path: 'booking'             
-            //     //component: AppComponent
-            // },
             {
                 path: 'boxer',
                 component: MainComponent
