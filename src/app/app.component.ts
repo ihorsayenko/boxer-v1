@@ -49,9 +49,9 @@ export class AppComponent implements OnInit {
     contactUs(event: Event): boolean {
         let currentDate = new Date(Date.now());
         let url = "https://api.elasticemail.com/v2/email/send";
-        let api = "27bf6e11-fe44-45ed-b8c4-e291737221fc";
-        let to = "qwertyihor11@gmail.com";
-        let from = "boxer.co.ua@gmail.com";
+        let api = "8b7e033a-f008-4150-a23e-8f7a0bfc68e6";
+        let to = "boxer.sklad@gmail.com";
+        let from = "boxer@mail.com.ua";
         let subject = "Зв'яжіться з нами  [" +
             currentDate.getDate() + "/" + Number(currentDate.getMonth()) + Number(1) + "/" +
             currentDate.getFullYear() + "-" + currentDate.toTimeString().split(" GMT")[0] + "]";

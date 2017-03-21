@@ -36,8 +36,8 @@ export class MainComponent implements OnInit {
     email: string;
     comments: string;
 
-    activeSizeBtb: ElementRef;
-    activeTermBtb: ElementRef;
+    activeSizeBtb: Element;
+    activeTermBtb: Element;
 
     imgs: any;
 
@@ -83,8 +83,8 @@ export class MainComponent implements OnInit {
         this.monthPay = 0;
         this.dateFrom = new Date();
 
-        this.activeSizeBtb.nativeElement.classList.remove('active_btn');
-        this.activeTermBtb.nativeElement.classList.remove('active_btn');
+        this.activeSizeBtb.classList.remove('active_btn');
+        this.activeTermBtb.classList.remove('active_btn');
         this.boxImgSrcFull = this.imgs[0].imgsrc;
 
         this.closePackageModal();
@@ -158,7 +158,7 @@ export class MainComponent implements OnInit {
 
     onSlideEnd(): void {
         if (this.activeTermBtb) {
-            this.activeTermBtb.nativeElement.classList.remove('active_btn');
+            this.activeTermBtb.classList.remove('active_btn');
             this.calculatePrice();
         }
     }
@@ -345,9 +345,9 @@ export class MainComponent implements OnInit {
     sendMail(event: Event): boolean {
         let currentDate = new Date(Date.now());
         let url = "https://api.elasticemail.com/v2/email/send";
-        let api = "27bf6e11-fe44-45ed-b8c4-e291737221fc";
-        let to = "qwertyihor11@gmail.com";
-        let from = "boxer.co.ua@gmail.com";
+        let api = "8b7e033a-f008-4150-a23e-8f7a0bfc68e6";
+        let to = "boxer.sklad@gmail.com";
+        let from = "boxer@mail.com.ua";
         let subject = "Бронювання боксу [" +
             currentDate.getDate() + "/" + Number(currentDate.getMonth()) + Number(1) + "/" +
             currentDate.getFullYear() + "-" + currentDate.toTimeString().split(" GMT")[0] + "]";
