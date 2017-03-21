@@ -138,7 +138,7 @@ nav .nav_tabs {
 }
 
 .img_logo_nav {
-    height: 3.5em;
+    height: 3.5em !important;
     clear: both;
     float: left;
 }
@@ -550,11 +550,11 @@ map_section .nav-tabs li a:hover {
 .map_section li.active a,
 .map_section li.active a:hover,
 .map_section li.active a:focus {
-    background-color: #4b5286;
-    color: #ffffff;
-    border: none;
-    border-radius: 0;
-    padding: 0 15px 0 15px;
+    background-color: #4b5286 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 15px 0 15px !important;
 }
 
 .map_section .tab-content {
@@ -703,7 +703,7 @@ map_section .nav-tabs li a:hover {
     height: 30px;
     color: #ffffff;
     font-size: 14px;
-    padding: 5px 15px 0 25px;
+    padding: 5px 15px 0 25px !important;
 }
 
 
