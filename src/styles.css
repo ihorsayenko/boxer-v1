@@ -58,6 +58,10 @@
     font-family: 'CaviarDreams';
 }
 
+.caviar_bold {
+    font-family: 'Caviar_Dreams_Bold';
+}
+
 .furore_regular {
     font-family: 'Furore';
 }
@@ -73,6 +77,14 @@
 
 /*------------------Main-------------------------------------*/
 
+html {
+    height: 100% !important;
+}
+
+body {
+    min-height: 100% !important;
+}
+
 section .container {
     background-color: #ececec;
     padding-bottom: 6em;
@@ -82,7 +94,7 @@ section .container {
 /*------------------Header-----------------------------------*/
 
 header .container {
-    font-size: 10pt;
+    font-size: 12px;
     background-color: #E5E5E5;
 }
 
@@ -115,7 +127,7 @@ header .row.phones_section {
 
 nav {
     background-color: #dcdfe7 !important;
-    font-size: 8pt;
+    font-size: 12px;
     box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.35);
 }
 
@@ -125,7 +137,7 @@ nav .furore_regular a {
 }
 
 .nav_tabs .nav_item {
-    margin-left: 2em;
+    margin-left: 1em;
 }
 
 .nav_tabs .nav_item:last-child {
@@ -138,9 +150,10 @@ nav .nav_tabs {
 }
 
 .img_logo_nav {
-    height: 3.5em !important;
+    height: 4em !important;
     clear: both;
     float: left;
+    transform: scaleY(1.001);
 }
 
 .img_thermometer {
@@ -528,6 +541,11 @@ footer .footer {
 
 
 /*Contacts*/
+
+.container.contacts {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
 
 .map_section {
     padding-top: 2em;
