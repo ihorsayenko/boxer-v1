@@ -250,21 +250,31 @@ div.can_store .part-two:hover {
 
 .container.choice {
     padding-top: 6em;
-    font-size: 14pt;
+    font-size: 20px;
     color: #253072;
 }
 
 .logo_second {
-    width: 400px;
+    width: 500px;
     margin: auto;
+    margin-top: 2em;
 }
 
 
 /* Four step section */
 
+.can_store_img,
+.cant_store_img {
+    height: 350px;
+}
+
+.four_steps_img {
+    width: 380px;
+}
+
 .four_steps p {
     color: #818387;
-    font-size: 11px;
+    font-size: 14px;
     margin-bottom: 0;
 }
 
@@ -274,12 +284,27 @@ div.can_store .part-two:hover {
     color: #253072;
 }
 
+.header_text {
+    font-size: 20px;
+    margin-bottom: 3em;
+}
+
+.allowed,
+.prohibited {
+    padding-top: 3em;
+}
+
 .four_steps_img {
     margin: auto;
 }
 
 .select_size_text {
-    padding-top: 15px;
+    padding-top: 20px;
+}
+
+.pac_stuff_text {
+    padding: 0;
+    padding-left: 35px;
 }
 
 .find_us_text {
@@ -288,7 +313,7 @@ div.can_store .part-two:hover {
 }
 
 .booking_box_text {
-    padding-right: 40px;
+    padding-left: 5px;
 }
 
 
@@ -503,6 +528,7 @@ div.advantages {
 
 .advantages_items {
     margin-top: 3em;
+    padding-bottom: 2em;
 }
 
 
@@ -522,7 +548,7 @@ footer .footer {
 
 .img_logo_footer {
     top: 20%;
-    width: 40%;
+    width: 60%;
 }
 
 .footer_text {
@@ -783,17 +809,19 @@ map_section .nav-tabs li a:hover {
 
 .your_booking_text {
     color: #4b5286;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .circle_count {
     background-color: #4a5187;
     display: inline-block;
     /*width: 35px;*/
-    font-size: 9px;
+    font-size: 12px;
     font-family: JuraLight;
     text-transform: lowercase;
     margin-bottom: 3px;
+    padding-left: 9px;
+    padding-right: 9px;
 }
 
 .order_details,
@@ -808,33 +836,36 @@ map_section .nav-tabs li a:hover {
 }
 
 .booking_desc {
-    font-family: CaviarDreams;
     color: #868688;
-    font-size: 10px;
     text-transform: uppercase;
     margin-top: 10px;
     margin-left: 5px;
 }
 
 .package_desc {
-    font-family: CaviarDreams;
     color: #868688;
-    font-size: 10px;
     margin-top: 10px;
     margin-left: 5px;
 }
 
 .final_price_text {
-    font-family: CaviarDreams;
     color: #868688;
     font-size: 12px;
     text-transform: uppercase;
 }
 
 .final_price {
-    font-family: CaviarDreams;
     color: #4b5286;
     font-size: 18px;
+}
+
+.main_booking_section {
+    font-size: 12px;
+}
+
+.booking_desc_items {
+    margin-top: 5px;
+    margin-left: 10px;
 }
 
 
