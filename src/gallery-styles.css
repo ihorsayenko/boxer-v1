@@ -130,24 +130,30 @@
 /* The images used in the slides, feel free to change this */
 
 #image-1 {
-    background: url('./img/gallery/1.jpg');
+    background: url('./img/gallery/1.jpg') no-repeat top center;
+    background-size: contain;
 }
 
 #image-2 {
-    background: url('./img/gallery/2.jpg');
+    background: url('./img/gallery/2.jpg') no-repeat top center;
+    background-size: contain;
 }
 
 #image-3 {
-    background: url('./img/gallery/3.jpg');
+    background: url('./img/gallery/3.jpg') no-repeat top center;
+    background-size: contain;
 }
 
 #image-4 {
-    background: url('./img/gallery/4.jpg');
+    background: url('./img/gallery/4.jpg') no-repeat top center;
+    background-size: contain;
 }
 
+
+/*
 #image-5 {
     background: url('./img/gallery/5.jpg');
-}
+}*/
 
 
 /* The next bit is a bit wordy, but it just positions the slides at either side of the selected slide 

@@ -173,9 +173,61 @@ nav .nav_tabs {
 
 /*----------------Capabilities---------------------------------*/
 
-section .container-fluid {
-    background-color: #6E9489;
-    height: 397px;
+.container-fluid.capabilities {
+    position: relative;
+}
+
+#left,
+#right {
+    position: absolute;
+    width: 50%;
+    height: 98.8%;
+    z-index: -2;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+#left {
+    background: #6E9489;
+    left: 0;
+}
+
+#right {
+    background: #FFD15B;
+    right: 0;
+}
+
+.capabilities .container {
+    padding-bottom: 0;
+    background: url("./img/mixed.png") no-repeat top center;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.home {
+    padding-bottom: 0;
+    background: url("./img/home.png") no-repeat top center !important;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.office {
+    padding-bottom: 0;
+    background: url("./img/office.png") no-repeat top center !important;
+    transition-property: background;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.home_color {
+    background-color: #FFD15B !important;
+}
+
+.office_color {
+    background-color: #6E9489 !important;
 }
 
 .can_store img {
@@ -187,6 +239,10 @@ section .container-fluid {
     font-size: 8pt;
     color: #ffffff;
     margin: 0;
+}
+
+.store_item .col-sm-5 {
+    padding-top: 7px;
 }
 
 .part-one .row.store_item .col-sm-1 {
@@ -211,42 +267,12 @@ section .container-fluid {
     margin-bottom: 3.7em;
 }
 
-div.can_store .part-one {
-    background-image: url('img/office-1.png');
-    width: 50%;
-    background-repeat: no-repeat;
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-
-div.can_store .part-one {
-    background-image: url('img/office-1.png');
-    width: 50%;
-    background-repeat: no-repeat;
-}
-
-div.can_store .part-one:hover {
-    background-image: url('img/home-1.png');
-    width: 50%;
-    background-repeat: no-repeat;
-}
-
-div.can_store .part-two {
-    background-image: url('img/home-2.png');
-    width: 50%;
-    background-repeat: no-repeat;
-}
-
-div.can_store .part-two:hover {
-    background-image: url('img/office-2.png');
-    width: 50%;
-    background-repeat: no-repeat;
-}
-
 
 /*----------------Choice---------------------------------*/
+
+#choice {
+    margin-top: -10px !important;
+}
 
 .container.choice {
     padding-top: 6em;

@@ -10,9 +10,7 @@ import { MainComponent } from './main.component';
 import { PackageGalleryComponent } from './package-gallery.component';
 import { QuestionAnswerComponent } from './question-answer.component';
 
-import { InputTextModule } from 'primeng/primeng';
-import { SliderModule } from 'primeng/primeng';
-import { CalendarModule } from 'primeng/primeng';
+import { InputTextModule, GalleriaModule, SliderModule, CalendarModule } from 'primeng/primeng';
 
 import { CommonService } from './common.service';
 
@@ -21,6 +19,7 @@ import { CommonService } from './common.service';
         BrowserModule,
         FormsModule,
         InputTextModule,
+        GalleriaModule,
         SliderModule,
         CalendarModule,
         HttpModule,

@@ -1,9 +1,11 @@
 <!-------------------------------------------------------- Capabilities ------------------------------------------------------------------------------>
 <section id="capabilities">
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row can_store caviar_regular">
-                <div class="col-md-6 part-one">
+    <div class="container-fluid capabilities" (mouseleave)="onCapabilitiesMouseover('3')">
+        <div id="left" [ngClass]="colorExpLeft" (mouseover)="onCapabilitiesMouseover('1')"></div>
+        <div id="right" [ngClass]="colorExpRight" (mouseover)="onCapabilitiesMouseover('2')"></div>
+        <div class=" container" [ngClass]="capabilitiesClass ">
+            <div class="row can_store caviar_regular ">
+                <div class="col-md-6 part-one " (mouseover)="onCapabilitiesMouseover('1')">
                     <div class="row store_item item_margin_bottom ">
                         <div class="col-sm-5">
                             <p class="pull-right text-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ<br>СПОРТ. СПОРЯДЖЕННЯ</p>
@@ -64,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 part-two">
+                <div class="col-md-6 part-two" (mouseover)="onCapabilitiesMouseover('2')">
                     <div class="row store_item item_margin_bottom">
                         <div class="col-sm-1 col-xs-offset-6">
                             <img class="pull-left" src="img/house.png">
@@ -121,7 +123,7 @@
         </div>
         <div class="row text-center">
             <div class="col-md-4">
-                <div class="text-center allowed furore_regular ">
+                <div class="text-center allowed furore_regular">
                     <img class="can_store_img img-responsive" src="img/Untitled-1.png" alt="Can store"><br>
                     <h4>речі, які можливо <br> зберігати на складі <br>індивідуального зберігання</h4>
                 </div>
@@ -224,7 +226,7 @@
                 <div class="row">
                     <div class="booking_btn_wrapper text-center">
                         <button class="btn btn-default" [ngClass]="this.boxSize >= 1 && this.daysCount >= 7 ? '' : 'hide'" data-toggle="modal" data-target="#bookingModal" (click)='openBookingModal()'>
-                                забронювати
+                            забронювати
                         </button>
                     </div>
                 </div>

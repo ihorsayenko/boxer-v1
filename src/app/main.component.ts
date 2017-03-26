@@ -65,6 +65,11 @@ export class MainComponent implements OnInit {
     packagesPrice: number;
     finalPrice: number = 0;
 
+    galleryPic: any[];
+
+    capabilitiesClass: string;
+    colorExpLeft: string;
+    colorExpRight: string;
 
     @ViewChildren('sizeBtns') boxSizeBtns: QueryList<ElementRef>;
     @ViewChildren('termsBtns') termsBtns: QueryList<ElementRef>;
@@ -97,6 +102,13 @@ export class MainComponent implements OnInit {
         this.common.getPackagePackages().then(i => { this.packages = i; this.packagesEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
         this.common.getPackageOthers().then(i => { this.others = i; this.othersEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
         this.common.getBoxImgs().then(items => { this.imgs = items; this.boxImgSrcFull = this.imgs[0].imgsrc; });
+        this.galleryPic = [];
+        this.galleryPic.push({source:'../img/gallery/1.JPG'});
+        this.galleryPic.push({source:'../img/gallery/2.JPG'});
+        this.galleryPic.push({source:'../img/gallery/3.JPG'});
+        this.galleryPic.push({source:'../img/gallery/4.JPG'});
+
+        let galleryImgs = document.getElementsByName('ui-panel-images');
     }
 
     onBtnSizeClick(elem: Element): void {
@@ -160,6 +172,23 @@ export class MainComponent implements OnInit {
         if (this.activeTermBtb) {
             this.activeTermBtb.classList.remove('active_btn');
             this.calculatePrice();
+        }
+    }
+
+    onCapabilitiesMouseover(type):void{
+        debugger;
+        if(type === '1'){
+            this.capabilitiesClass = 'office';
+            this.colorExpLeft ="office_color";
+            this.colorExpRight ="office_color";
+        }else if(type ==='2'){
+            this.capabilitiesClass = 'home';
+            this.colorExpLeft ="home_color";
+            this.colorExpRight ="home_color";
+        }else if(type ==='3'){
+            this.capabilitiesClass = '';
+            this.colorExpLeft ="";
+            this.colorExpRight ="";
         }
     }
 
