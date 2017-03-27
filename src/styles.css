@@ -54,6 +54,12 @@
     src: url('fonts/JuraRegular.eot') format('embedded-opentype'), url('fonts/JuraRegular.woff2') format('woff2'), url('fonts/JuraRegular.woff') format('woff'), url('fonts/JuraRegular.ttf') format('truetype'), url('fonts/JuraRegular.svg#JuraRegular') format('svg');
 }
 
+@font-face {
+    font-family: 'EnigmaU_2';
+    src: url('fonts/EnigmaU_2.eot');
+    src: url('fonts/EnigmaU_2.eot') format('embedded-opentype'), url('fonts/EnigmaU_2.woff2') format('woff2'), url('fonts/EnigmaU_2.woff') format('woff'), url('fonts/EnigmaU_2.ttf') format('truetype'), url('fonts/EnigmaU_2.svg#EnigmaU_2') format('svg');
+}
+
 .caviar_regular {
     font-family: 'CaviarDreams';
 }
@@ -72,6 +78,10 @@
 
 .jura_bold {
     font-family: 'JuraDemiBold';
+}
+
+.enigma_u {
+    font-family: 'EnigmaU_2';
 }
 
 
@@ -722,7 +732,7 @@ map_section .nav-tabs li a:hover {
 }
 
 .container_flex .package_desc {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -735,25 +745,36 @@ map_section .nav-tabs li a:hover {
     color: #293379;
 }
 
-.table_secton {
+.table_section {
     margin-top: 2.5em;
 }
 
-.table_secton li {
+.table_section li {
     margin: 0.5em 3em 0 3em;
 }
 
-.table_secton li .col-md-1 {
+.table_section li .col-md-1 {
     padding: 0 30px 0 30px;
 }
 
 .full_box {
     box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.39);
     margin: 0.5em 2em 0 2em !important;
+    transition: 1s ease;
 }
 
 .answer {
     margin-top: 0.5em;
+}
+
+.question_item {
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.answer_show {
+    display: block;
+    transition: all 1s ease;
 }
 
 
@@ -872,6 +893,7 @@ map_section .nav-tabs li a:hover {
     color: #868688;
     margin-top: 10px;
     margin-left: 5px;
+    font-size: 12px;
 }
 
 .final_price_text {
@@ -982,6 +1004,10 @@ map_section .nav-tabs li a:hover {
 
 .odd {
     background-color: #ECECEC;
+}
+
+.packages_modal .booking_btn_wrapper button {
+    width: 150px;
 }
 
 

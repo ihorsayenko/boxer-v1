@@ -4,7 +4,7 @@ import { CommonService } from './common.service';
 
 @Component({
     moduleId: module.id,
-    selector: 'qiestion-answer',
+    selector: 'question-answer',
     templateUrl: '../question-answer.html'
 })
 

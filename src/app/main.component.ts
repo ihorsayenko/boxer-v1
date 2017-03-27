@@ -176,7 +176,6 @@ export class MainComponent implements OnInit {
     }
 
     onCapabilitiesMouseover(type):void{
-        debugger;
         if(type === '1'){
             this.capabilitiesClass = 'office';
             this.colorExpLeft ="office_color";
