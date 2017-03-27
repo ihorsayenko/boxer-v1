@@ -44,7 +44,7 @@ import { CommonService } from './common.service';
             },
             {
                 path: '',
-                redirectTo: '/boxer',
+                redirectTo: 'boxer',
                 pathMatch: 'full'
             }])
     ],
