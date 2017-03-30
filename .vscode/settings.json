@@ -11,5 +11,6 @@
     "editor.minimap.enabled": true,
     "workbench.iconTheme": "vscode-icons",
     "editor.formatOnSave": false,
-    "vsicons.presets.angular": true
+    "vsicons.presets.angular": true,
+    "editor.cursorBlinking": "solid"
 }

@@ -1,5 +1,5 @@
 <section id="packageGallery">
-    <div class="container">
+    <div class="container" style="min-height: 100%">
         <div class="packages_wrapper">
             <div class="package_tabs">
                 <ul class="nav nav-tabs jura_bold">
@@ -9,14 +9,14 @@
                     <li role="presentation" class=""><a class="" href="#others" data-toggle="tab">інші матеріали</a></li>
                 </ul>
 
-                <div class="tab-content  clearfix enigma_u">
+                <div class="tab-content clearfix enigma_u">
                     <div class="tab-pane active" id='boxes'>
                         <div class="container_flex">
                             <div class="thumbnail flex_item" [id]='item.id' *ngFor="let item of boxes;">
                                 <img class="img-responsive package_img" [src]="item.imgSrc" alt="">
-                                <div class="text-center">
+                                <div class="text-center package_text">
                                     <ul class="package_desc">
-                                        <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                                        <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i=index;'>
                                             {{desc}}
                                         </li>
                                     </ul>
