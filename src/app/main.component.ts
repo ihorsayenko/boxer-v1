@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
 import { Http, Headers, URLSearchParams } from '@angular/http';
 
 import { CommonService } from './common.service'
+import { CommonModal } from './common.model'
 import { PackageModel } from './package.model'
 
 @Component({
@@ -70,6 +71,7 @@ export class MainComponent implements OnInit {
     capabilitiesClass: string;
     colorExpLeft: string;
     colorExpRight: string;
+    data: CommonModal;
 
     @ViewChildren('sizeBtns') boxSizeBtns: QueryList<ElementRef>;
     @ViewChildren('termsBtns') termsBtns: QueryList<ElementRef>;
@@ -96,8 +98,8 @@ export class MainComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        //this.storage.getData().then(item => this.Items = item.QuestionItems as any);
-        this.common.getPackageBoxes().then(i => { this.boxes = i; this.boxesEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
+        this.common.getData().then(i => { this.data = i; });
+        this.common.getPackageLocksAndShelves().then(i => { this.locksAndShelves = i; this.locksAndShelvesEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
         this.common.getPackageLocksAndShelves().then(i => { this.locksAndShelves = i; this.locksAndShelvesEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
         this.common.getPackagePackages().then(i => { this.packages = i; this.packagesEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
         this.common.getPackageOthers().then(i => { this.others = i; this.othersEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
@@ -285,15 +287,17 @@ export class MainComponent implements OnInit {
     calculatePrice(): void {
         if (this.boxSize > 1) {
             let price;
+
             if (this.daysCount <= 30) {
-                price = 8.4;
+                price = this.data.Less30;
             } else if (this.daysCount <= 90) {
-                price = 7.3;
+                price = this.data.Less90;
             } else if (this.daysCount <= 180) {
-                price = 6.6;
+                price = this.data.Less180;
             } else if (this.daysCount <= 360) {
-                price = 6;
+                price = this.data.Less360;
             }
+
             this.periodPay = Math.round(price * this.boxSize * this.daysCount);
 
             if (this.daysCount <= 30) {
@@ -301,8 +305,8 @@ export class MainComponent implements OnInit {
             }else{
                 this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
             }
-        } else if (this.boxSize == 1) {
-            this.periodPay = Math.round(8 * this.boxSize * this.daysCount);
+        } else if (this.boxSize == 1 && this.daysCount > 0) {
+            this.periodPay = Math.round(Number(this.data.OneM3) * this.boxSize * this.daysCount);
             this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
         }
 

@@ -1,6 +1,13 @@
 {
     "Temprature": 20,
     "Humidity": 10,
+
+    "OneM3": 8,
+    "Less30": 8.4,
+    "Less90": 7.3,
+    "Less180": 6.6,
+    "Less360": 6,
+
     "QuestionItems": [{
             "Id": 1,
             "Question": "Хто може орендувати бокс? ",
