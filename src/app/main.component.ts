@@ -103,10 +103,10 @@ export class MainComponent implements OnInit {
         this.common.getPackageOthers().then(i => { this.others = i; this.othersEtalon = (JSON.parse(JSON.stringify(i))) as PackageModel[]; });
         this.common.getBoxImgs().then(items => { this.imgs = items; this.boxImgSrcFull = this.imgs[0].imgsrc; });
         this.galleryPic = [];
-        this.galleryPic.push({source:'../img/gallery/1.JPG'});
-        this.galleryPic.push({source:'../img/gallery/2.JPG'});
-        this.galleryPic.push({source:'../img/gallery/3.JPG'});
-        this.galleryPic.push({source:'../img/gallery/4.JPG'});
+        this.galleryPic.push({ source: '../img/gallery/1.JPG' });
+        this.galleryPic.push({ source: '../img/gallery/2.JPG' });
+        this.galleryPic.push({ source: '../img/gallery/3.JPG' });
+        this.galleryPic.push({ source: '../img/gallery/4.JPG' });
 
         let galleryImgs = document.getElementsByName('ui-panel-images');
     }
@@ -136,7 +136,7 @@ export class MainComponent implements OnInit {
     onBtnTermClick(elem: Element): void {
         let id = elem.id;
         let btns = this.termsBtns.toArray()[0].nativeElement.children;
-        
+
         for (let element of btns) {
             if (element.classList.contains('active_btn') && element.id !== id) {
                 element.classList.remove('active_btn')
@@ -175,19 +175,19 @@ export class MainComponent implements OnInit {
         }
     }
 
-    onCapabilitiesMouseover(type):void{
-        if(type === '1'){
+    onCapabilitiesMouseover(type): void {
+        if (type === '1') {
             this.capabilitiesClass = 'office';
-            this.colorExpLeft ="office_color";
-            this.colorExpRight ="office_color";
-        }else if(type ==='2'){
+            this.colorExpLeft = "office_color";
+            this.colorExpRight = "office_color";
+        } else if (type === '2') {
             this.capabilitiesClass = 'home';
-            this.colorExpLeft ="home_color";
-            this.colorExpRight ="home_color";
-        }else if(type ==='3'){
+            this.colorExpLeft = "home_color";
+            this.colorExpRight = "home_color";
+        } else if (type === '3') {
             this.capabilitiesClass = '';
-            this.colorExpLeft ="";
-            this.colorExpRight ="";
+            this.colorExpLeft = "";
+            this.colorExpRight = "";
         }
     }
 
@@ -283,22 +283,26 @@ export class MainComponent implements OnInit {
     }
 
     calculatePrice(): void {
-        if (this.boxSize > 1 && this.daysCount >= 7) {
+        if (this.boxSize > 1) {
             let price;
             if (this.daysCount <= 30) {
-                price = 12;
+                price = 8.4;
             } else if (this.daysCount <= 90) {
-                price = 10.5;
+                price = 7.3;
             } else if (this.daysCount <= 180) {
-                price = 9.5;
+                price = 6.6;
             } else if (this.daysCount <= 360) {
-                price = 8.5;
+                price = 6;
             }
-
             this.periodPay = Math.round(price * this.boxSize * this.daysCount);
-            this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
-        } else if (this.boxSize == 1 && this.daysCount >= 7) {
-            this.periodPay = Math.round(12 * this.boxSize * this.daysCount);
+
+            if (this.daysCount <= 30) {
+                this.monthPay = Math.round(price * this.boxSize * 30);
+            }else{
+                this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
+            }
+        } else if (this.boxSize == 1) {
+            this.periodPay = Math.round(8 * this.boxSize * this.daysCount);
             this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
         }
 

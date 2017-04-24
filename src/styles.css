@@ -772,7 +772,7 @@ map_section .nav-tabs li a:hover {
 .full_box {
     box-shadow: 1px 3px 6px 0px rgba(0, 0, 0, 0.39);
     margin: 0.5em 2em 0 2em !important;
-    transition: 1s ease;
+    /*transition: 1s ease;*/
 }
 
 .answer {
@@ -781,12 +781,12 @@ map_section .nav-tabs li a:hover {
 
 .question_item {
     cursor: pointer;
-    transition: all 1s ease;
+    /*transition: all 1s ease;*/
 }
 
 .answer_show {
     display: block;
-    transition: all 1s ease;
+    /*transition: all 1s ease;*/
 }
 
 
