@@ -5,7 +5,7 @@
         <div id="right" [ngClass]="colorExpRight" (mouseover)="onCapabilitiesMouseover('2')"></div>
         <div class=" container" [ngClass]="capabilitiesClass ">
             <div class="row can_store caviar_regular ">
-                <div class="col-md-6 part-one " (mouseover)="onCapabilitiesMouseover('1')">
+                <div class="col-md-6 part-one hidden-xs" (mouseover)="onCapabilitiesMouseover('1')">
                     <div class="row store_item item_margin_bottom ">
                         <div class="col-sm-5">
                             <p class="pull-right text-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ<br>СПОРТ. СПОРЯДЖЕННЯ</p>
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="col-sm-1">
-                            <img class="pull-left" src="./img/warehouse.png">
+                            <img class="pull-left" src="./img/WAREHOUSE.png">
                         </div>
                     </div>
                     <div class="row store_item">
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 part-two" (mouseover)="onCapabilitiesMouseover('2')">
+                <div class="col-md-6 part-two hidden-xs" (mouseover)="onCapabilitiesMouseover('2')">
                     <div class="row store_item item_margin_bottom">
                         <div class="col-sm-1 col-xs-offset-6">
                             <img class="pull-left" src="img/house.png">
@@ -102,6 +102,42 @@
                 </div>
             </div>
         </div>
+        <div class="mobile-capabilities">
+            <p class="title text-right">СКЛАД</p>
+            <p class="title text-left">ДЛЯ:</p>
+            <p>
+                <img alt="" class="center-block" src="img/sport.png">
+                ЗБЕРІГАННЯ СПОРТ. СПОРЯДЖЕННЯ
+            </p>
+            <p>
+                <img alt="" class="center-block" src="img/doc.png">
+                ЗБЕРІГАННЯ ДОКУМЕНТІВ
+            </p>
+            <p>
+                <img alt="" class="center-block" src="img/WAREHOUSE.png">
+                ЗБЕРІГАННЯ СЕЗОННИХ ТОВАРІВ
+            </p>
+            <p>
+                <img alt="" class="center-block" src="img/work_tool.png">
+                ЗБЕРІГАННЯ ІНСТРУМЕНТІВ / ЗАПЧАСТИН
+            </p>
+            <p>
+              <img alt="" class="center-block" src="img/house.png">
+              ТОВАРІВ ПОВСЯКДЕННОГО ВЖИТКУ
+            </p>
+            <p>
+              <img alt="" class="center-block" src="img/computer.png">
+              ІНТЕРНЕТ МАГАЗИНІВ
+            </p>
+            <p>
+              <img alt="" class="center-block" src="img/business.png">
+              МАЛОГО ТА СЕРЕДНЬОГО БІЗНЕСУ
+            </p>
+            <p>
+              <img alt="" class="center-block" src="img/truck.png">
+              ПЕРЕЇЗДУ / РЕМОНТУ
+            </p>
+        </div>
     </div>
 </section>
 <!-------------------------------------------------------- Choice ------------------------------------------------------------------------------------>
@@ -117,7 +153,7 @@
 <!-------------------------------------------------------- Store ---------------------------------------------------------------------------------->
 <section id="store">
     <div class="container">
-        <div class="row text-center header_text furore_regular">
+        <div class="row text-center header_text furore_regular hidden-xs">
             <span>Чотири кроки для оренди складу</span>
             <br>
         </div>
@@ -128,7 +164,7 @@
                     <h4>речі, які можливо <br> зберігати на складі <br>індивідуального зберігання</h4>
                 </div>
             </div>
-            <div class="col-md-4 four_steps jura_medium">
+            <div class="col-md-4 four_steps jura_medium hidden-xs">
                 <div class="row">
                     <p class="col-sm-5 col-xs-offset-2 select_size_text">Оберіть розмір <br> боксу та <br> термін оренди</p>
                     <p class="col-sm-5 pac_stuff_text">пакуйте речі <br> та зберігайте їх <br> у вашому боксі <br> складу BOXER</p>
@@ -148,18 +184,30 @@
                 </div>
             </div>
         </div>
+        <div class="steps-mobile visible-xs">
+            <div class="row text-center header_text furore_regular visible-xs">
+              <span>Чотири кроки для оренди складу</span>
+            </div>
+            <img class="img-responsive center-block" src="img/4steps.png" alt="Four steps">
+            <ul>
+              <li>Знайдіть нас.</li>
+              <li>Оберіть розмір боксу та термін оренди.</li>
+              <li>Забронюйте бокс і чекайте на дзвінок від менеджера.</li>
+              <li>Пакуйте речі та зберігайте їх у вашому боксі складу BOXER.</li>
+            </ul>
+        </div>
     </div>
 </section>
 <!-------------------------------------------------------- Booking ---------------------------------------------------------------------------------->
 <section id="booking">
     <div class="container">
         <div class="row jura_bold">
-            <div class="calculator col-md-10 col-xs-offset-1">
+            <div class="calculator col-md-10 col-md-offset-1">
                 <div class="row from_header text-center furore_regular">
                     <h4>КАЛЬКУЛЯТОР ВАРТОСТІ ОРЕНДИ СКЛАДУ ІНДИВІДУАЛЬНОГО ЗБЕРІГАННЯ</h4>
                 </div>
                 <div class="row">
-                    <div class="col-md-5 col-xs-offset-1 text-center">
+                    <div class="col-md-5 col-md-offset-1 text-center">
                         <div class="row">
                             <br>
                             <p class="box_size_text">розмір боксу</p>
@@ -211,7 +259,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-5 col-xs-offset-1">
+                    <div class="col-md-5 col-md-offset-1">
                         <div class="row text-center">
                             <div class="box_img">
                                 <img class="img-responsive" [src]="boxImgSrcFull" alt="Box-12m" />
@@ -269,17 +317,17 @@
                 <hr style='height: 2px; background-color: #ffffff; margin: 0 18em 0 18em;'>
             </div>
             <div class="row text-center advantages_items">
-                <div class="col-md-3">
-                    <img src="./img/advantages-1.png" alt="Advantages">
+                <div class="col-md-3 col-xs-6">
+                    <img src="./img/advantages-1.png" class="img-responsive" alt="Advantages">
                 </div>
-                <div class="col-md-3">
-                    <img src="./img/advantages-2.png" alt="Advantages">
+                <div class="col-md-3 col-xs-6">
+                    <img src="./img/advantages-2.png" class="img-responsive" alt="Advantages">
                 </div>
-                <div class="col-md-3">
-                    <img src="./img/advantages-3.png" alt="Advantages">
+                <div class="col-md-3 col-xs-6">
+                    <img src="./img/advantages-3.png" class="img-responsive" alt="Advantages">
                 </div>
-                <div class="col-md-3">
-                    <img src="./img/advantages-4.png" alt="Advantages">
+                <div class="col-md-3 col-xs-6">
+                    <img src="./img/advantages-4.png" class="img-responsive" alt="Advantages">
                 </div>
             </div>
         </div>
@@ -441,7 +489,7 @@
                                             </div>
                                             <div class="col-md-4 text-center inputs">
                                                 <div class="counters input-group">
-                                                    <span class="input-group-btn">   
+                                                    <span class="input-group-btn">
                                                         <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
                                                     </span>
                                                     <input type="text" class="form-control text-center" [value]="item.count" readonly>
@@ -471,7 +519,7 @@
                                             </div>
                                             <div class="col-md-4 text-center inputs">
                                                 <div class="counters input-group">
-                                                    <span class="input-group-btn">   
+                                                    <span class="input-group-btn">
                                                         <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
                                                     </span>
                                                     <input type="text" class="form-control text-center" [value]="item.count" readonly>
@@ -501,7 +549,7 @@
                                             </div>
                                             <div class="col-md-4 text-center inputs">
                                                 <div class="counters input-group">
-                                                    <span class="input-group-btn">   
+                                                    <span class="input-group-btn">
                                                         <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
                                                     </span>
                                                     <input type="text" class="form-control text-center" [value]="item.count" readonly>
@@ -531,7 +579,7 @@
                                             </div>
                                             <div class="col-md-4 text-center inputs">
                                                 <div class="counters input-group">
-                                                    <span class="input-group-btn">   
+                                                    <span class="input-group-btn">
                                                         <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
                                                     </span>
                                                     <input type="text" class="form-control text-center" [value]="item.count" readonly>

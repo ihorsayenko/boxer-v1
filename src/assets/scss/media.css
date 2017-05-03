@@ -1,0 +1,237 @@
+.mobile-capabilities {
+  display: none; }
+
+@media (max-width: 767px) {
+  header .container {
+    padding-right: 0; }
+    header .container .header_main_row {
+      margin-bottom: 10px;
+      text-align: right; }
+
+  nav {
+    padding-bottom: 10px; }
+    nav .img_logo_nav {
+      width: 100%;
+      height: auto !important;
+      margin: 0 auto; }
+    nav .list-inline {
+      text-align: left; }
+    nav .nav_item {
+      width: 50%;
+      display: inline-block;
+      float: left;
+      margin: 0;
+      padding: 0;
+      margin-left: 0;
+      font-size: 11px;
+      line-height: 21px; }
+      nav .nav_item:nth-child(odd) {
+        text-align: left;
+        margin-left: 0 !important;
+        margin-right: 0; }
+      nav .nav_item:nth-child(even) {
+        text-align: right;
+        margin-right: 0 !important;
+        margin-left: 0; }
+    nav .temperature {
+      float: right; }
+
+  #capabilities .container {
+    background: url("../../img/features-mobile.png") no-repeat top center;
+    background-size: contain;
+    margin-left: -16px;
+    width: calc(100% + 32px);
+    padding-top: 240px; }
+
+  .mobile-capabilities {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    text-align: center; }
+    .mobile-capabilities > p {
+      font-family: CaviarDreams;
+      font-weight: bold;
+      width: 50%;
+      font-size: 12px; }
+      .mobile-capabilities > p img {
+        margin-bottom: 15px; }
+    .mobile-capabilities .title {
+      font-family: 'Furore';
+      font-weight: normal;
+      padding: 0 5px;
+      margin-bottom: 20px;
+      font-size: 16px; }
+      .mobile-capabilities .title:first-child {
+        text-align: right;
+        color: #FFD15B; }
+      .mobile-capabilities .title:last-child {
+        color: #6E9489; }
+
+  .container.choice {
+    padding-top: 20px;
+    padding-bottom: 25px; }
+    .container.choice .logo_second {
+      margin-top: 10px; }
+
+  .header_text {
+    margin-bottom: 0; }
+
+  .can_store_img,
+  .cant_store_img {
+    width: 100%;
+    height: auto; }
+
+  .allowed.furore_regular {
+    padding-top: 0; }
+
+  section .container {
+    padding-bottom: 30px; }
+
+  .steps-mobile {
+    margin-top: 50px; }
+    .steps-mobile .header_text {
+      margin-bottom: 15px; }
+    .steps-mobile ul {
+      list-style: decimal;
+      padding-left: 20px;
+      margin-top: 20px;
+      font-family: JuraMedium;
+      line-height: 20px;
+      font-size: 16px; }
+      .steps-mobile ul li {
+        margin-bottom: 10px; }
+
+  #booking .box_size_btns {
+    padding: 0 15px; }
+    #booking .box_size_btns > .btn-default {
+      font-size: 13px;
+      width: calc(100% / 3 - 15px);
+      margin-left: 15px;
+      margin-bottom: 10px; }
+  #booking .tersm_text {
+    padding-top: 0; }
+  #booking #termsBtns {
+    padding: 0 15px; }
+    #booking #termsBtns > .btn-default {
+      font-size: 13px;
+      width: calc(100% / 3 - 15px);
+      margin-left: 15px;
+      margin-bottom: 10px; }
+  #booking .box_img {
+    width: 100%;
+    height: auto;
+    margin-left: 0; }
+  #booking .calculator {
+    padding-bottom: 0; }
+
+  .booking_btn_wrapper {
+    padding-bottom: 15px; }
+
+  #slider {
+    margin-top: 0; }
+    #slider #slides > div > span {
+      background-size: cover; }
+    #slider .arrows {
+      box-shadow: none !important; }
+
+  #advantages h4 {
+    padding: 0 15px; }
+  #advantages .advantages {
+    margin: 0; }
+  #advantages .advantages_items {
+    margin-top: 0; }
+    #advantages .advantages_items .img-responsive {
+      margin: 0 auto; }
+
+  footer .container {
+    padding: 0; }
+  footer .footer_content {
+    margin: 15px 0;
+    text-align: center; }
+    footer .footer_content .col-md-6 {
+      padding-left: 0;
+      padding-right: 0; }
+      footer .footer_content .col-md-6 ul.list-unstyled {
+        float: none !important; }
+    footer .footer_content .footer_logo {
+      text-align: center;
+      margin-top: 35px;
+      margin-bottom: 10px; }
+      footer .footer_content .footer_logo .img_logo_footer {
+        float: none !important; }
+
+  .booking_modal {
+    top: 0; }
+
+  .packages_modal {
+    top: 0; }
+    .packages_modal .nav.nav-tabs > li {
+      width: 100%;
+      display: block; }
+      .packages_modal .nav.nav-tabs > li a {
+        width: 100%;
+        border-radius: 0; }
+      .packages_modal .nav.nav-tabs > li.active a {
+        background-color: rgba(74, 81, 135, 0.09); }
+
+  .packages_wrapper .nav.nav-tabs {
+    margin-left: 0; }
+    .packages_wrapper .nav.nav-tabs li {
+      margin-left: 0;
+      float: none; }
+      .packages_wrapper .nav.nav-tabs li a {
+        width: 100%;
+        border-radius: 0; }
+      .packages_wrapper .nav.nav-tabs li.active a {
+        background-color: rgba(74, 81, 135, 0.09) !important; }
+  .packages_wrapper .tab-content {
+    margin-top: 20px; }
+    .packages_wrapper .tab-content .thumbnail {
+      flex: 0 0 100%;
+      margin: 0 0 15px; }
+      .packages_wrapper .tab-content .thumbnail .package_text {
+        height: auto; }
+
+  .container.contacts .map_section .tab-content {
+    width: 100%;
+    border: none; }
+    .container.contacts .map_section .tab-content .tab-pane.active {
+      border: 1px solid #000000; }
+  .container.contacts .contacts_info {
+    padding-top: 25px; }
+    .container.contacts .contacts_info .working_time_section {
+      margin-bottom: 20px; }
+  .container.contacts .conntact_with_us {
+    padding-top: 0; }
+    .container.contacts .conntact_with_us .col-md-7 {
+      margin-bottom: 21px; }
+  .container.contacts .partner_text {
+    text-align: center; }
+  .container.contacts .partner_img img {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; }
+
+  #questionAnswerId .title_text {
+    padding: 0 30px;
+    transform: scale(1); }
+  #questionAnswerId .list-group .list-group-item {
+    border-radius: 0 !important;
+    width: 90%;
+    margin: 0 auto; }
+    #questionAnswerId .list-group .list-group-item .question_item .q-title {
+      margin-bottom: 10px; }
+    #questionAnswerId .list-group .list-group-item .question_item .q-question {
+      text-align: center; }
+    #questionAnswerId .list-group .list-group-item .question_item .q-toggle {
+      text-align: center;
+      margin-top: 7px; }
+    #questionAnswerId .list-group .list-group-item.full_box {
+      width: 95%;
+      margin: 0 auto !important; }
+
+  .delivery-man {
+    margin-top: 25px; } }
+
+/*# sourceMappingURL=media.css.map */
