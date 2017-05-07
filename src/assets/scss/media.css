@@ -463,4 +463,18 @@
 .advantages .img-responsive {
   margin: 0 auto; }
 
+.can_store_img,
+.cant_store_img {
+  height: auto; }
+
+.four_steps_img, .img_logo_footer {
+  width: auto; }
+
+.pac_stuff_text, .select_size_text, .booking_box_text, .find_us_text {
+  padding-left: 0;
+  padding-right: 0; }
+
+.find_us_text {
+  text-align: right; }
+
 /*# sourceMappingURL=media.css.map */
