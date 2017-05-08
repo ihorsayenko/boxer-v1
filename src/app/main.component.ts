@@ -285,7 +285,7 @@ export class MainComponent implements OnInit {
     }
 
     calculatePrice(): void {
-        if (this.boxSize > 1) {
+        if (this.boxSize > 1 && this.daysCount > 0) {
             let price;
 
             if (this.daysCount <= 30) {
