@@ -1,11 +1,8 @@
 export class CommonModal {
-    Temprature: Number;
+    Temperature: Number;
     Humidity: Number;
-    OneM3: number;
-    Less30: Number;
-    Less90: Number;
-    Less180: Number;
-    Less360: Number;
+    Less60: Number;
+    More60: Number;
     QuestionItems = {
         ID: Number,
         Question: String,

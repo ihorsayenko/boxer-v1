@@ -406,9 +406,10 @@ input.undefined.ui-inputtext.ui-corner-all.ui-state-default.ui-widget.ui-state-f
 }
 
 .box_size_btns button {
-    width: 45px;
+    width: 50px;
     margin-left: 0;
     font-size: 14px;
+    margin-top: 5px;
 }
 
 .one_m_btn {
@@ -427,7 +428,7 @@ input.undefined.ui-inputtext.ui-corner-all.ui-state-default.ui-widget.ui-state-f
 }
 
 .terms_btns button {
-    width: 71px;
+    width: 80px;
     margin-left: 10px !important;
 }
 

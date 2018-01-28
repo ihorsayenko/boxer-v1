@@ -1,607 +1,663 @@
 <!-------------------------------------------------------- Capabilities ------------------------------------------------------------------------------>
 <section id="capabilities">
-    <div class="container-fluid capabilities" (mouseleave)="onCapabilitiesMouseover('3')">
-        <div id="left" [ngClass]="colorExpLeft" (mouseover)="onCapabilitiesMouseover('1')"></div>
-        <div id="right" [ngClass]="colorExpRight" (mouseover)="onCapabilitiesMouseover('2')"></div>
-        <div class=" container" [ngClass]="capabilitiesClass ">
-            <div class="row can_store caviar_regular ">
-                <div class="col-md-6 part-one hidden-xs hidden-sm" (mouseover)="onCapabilitiesMouseover('1')">
-                    <div class="row store_item item_margin_bottom ">
-                        <div class="col-sm-5">
-                            <p class="pull-right text-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ<br>СПОРТ. СПОРЯДЖЕННЯ</p>
-                        </div>
-                        <div class="col-sm-1">
-                            <img class="pull-left" src="img/sport.png">
-                        </div>
-                    </div>
-                    <div class="row store_item item_margin_bottom">
-                        <div class="col-sm-5">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="pull-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="pull-right">ДОКУМЕНТІВ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-1">
-                            <img class="pull-left" src="img/doc.png">
-                        </div>
-                    </div>
-                    <div class="row store_item item_margin_bottom">
-                        <div class="col-sm-5">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="pull-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ</p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="pull-right">СЕЗОННИХ ТОВАРІВ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-1">
-                            <img class="pull-left" src="./img/WAREHOUSE.png">
-                        </div>
-                    </div>
-                    <div class="row store_item">
-                        <div class="col-sm-5">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="pull-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="pull-right">ІНСТРУМЕНТІВ / ЗАПЧАСТИН</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-1">
-                            <img class="pull-left" src="img/work_tool.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 part-two hidden-xs hidden-sm" (mouseover)="onCapabilitiesMouseover('2')">
-                    <div class="row store_item item_margin_bottom">
-                        <div class="col-sm-1 col-xs-offset-6">
-                            <img class="pull-left" src="img/house.png">
-                        </div>
-                        <div class="col-sm-5">
-                            <p class="pull-left">СКЛАД ДЛЯ ЗБЕРІГАННЯ <br> ТОВАРІВ ПОВСЯКДЕННОГО ВЖИТКУ</p>
-                        </div>
-                    </div>
-                    <div class="row store_item item_margin_bottom">
-                        <div class="col-sm-1 col-xs-offset-6">
-                            <img class="pull-left" src="img/computer.png">
-                        </div>
-                        <div class="col-sm-5">
-                            <p class="pull-left">СКЛАД ДЛЯ ІНТЕРНЕТ <br> МАГАЗИНІВ</p>
-                        </div>
-                    </div>
-                    <div class="row store_item item_margin_bottom">
-                        <div class="col-sm-1 col-xs-offset-6">
-                            <img class="pull-left" src="img/business.png">
-                        </div>
-                        <div class="col-sm-5">
-                            <p class="pull-left">МІНІ-СКЛАД ДЛЯ МАЛОГО <br> ТА СЕРЕДНЬОГО БІЗНЕСУ</p>
-                        </div>
-                    </div>
-                    <div class="row store_item">
-                        <div class="col-sm-1 col-xs-offset-6">
-                            <img class="pull-left" src="./img/truck.png">
-                        </div>
-                        <div class="col-sm-5">
-                            <p class="pull-left">СКЛАД ДЛЯ ПЕРЕЇЗДУ / <br> РЕМОНТУ</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="container-fluid capabilities" (mouseleave)="onCapabilitiesMouseover('3')">
+    <div id="left" [ngClass]="colorExpLeft" (mouseover)="onCapabilitiesMouseover('1')"></div>
+    <div id="right" [ngClass]="colorExpRight" (mouseover)="onCapabilitiesMouseover('2')"></div>
+    <div class=" container" [ngClass]="capabilitiesClass ">
+      <div class="row can_store caviar_regular ">
+        <div class="col-md-6 part-one hidden-xs hidden-sm" (mouseover)="onCapabilitiesMouseover('1')">
+          <div class="row store_item item_margin_bottom ">
+            <div class="col-sm-5">
+              <p class="pull-right text-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ
+                <br>СПОРТ. СПОРЯДЖЕННЯ</p>
             </div>
+            <div class="col-sm-1">
+              <img class="pull-left" src="img/sport.png">
+            </div>
+          </div>
+          <div class="row store_item item_margin_bottom">
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="pull-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="pull-right">ДОКУМЕНТІВ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <img class="pull-left" src="img/doc.png">
+            </div>
+          </div>
+          <div class="row store_item item_margin_bottom">
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="pull-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="pull-right">СЕЗОННИХ ТОВАРІВ</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <img class="pull-left" src="./img/WAREHOUSE.png">
+            </div>
+          </div>
+          <div class="row store_item">
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="pull-right">СКЛАД ДЛЯ ЗБЕРІГАННЯ </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="pull-right">ІНСТРУМЕНТІВ / ЗАПЧАСТИН</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <img class="pull-left" src="img/work_tool.png">
+            </div>
+          </div>
         </div>
-        <div class="mobile-capabilities">
-            <p class="title text-right">СКЛАД</p>
-            <p class="title text-left">ДЛЯ:</p>
-            <p>
-                <img alt="" class="center-block" src="img/sport.png">
-                ЗБЕРІГАННЯ СПОРТ. СПОРЯДЖЕННЯ
-            </p>
-            <p>
-                <img alt="" class="center-block" src="img/doc.png">
-                ЗБЕРІГАННЯ ДОКУМЕНТІВ
-            </p>
-            <p>
-                <img alt="" class="center-block" src="img/WAREHOUSE.png">
-                ЗБЕРІГАННЯ СЕЗОННИХ ТОВАРІВ
-            </p>
-            <p>
-                <img alt="" class="center-block" src="img/work_tool.png">
-                ЗБЕРІГАННЯ ІНСТРУМЕНТІВ / ЗАПЧАСТИН
-            </p>
-            <p>
-              <img alt="" class="center-block" src="img/house.png">
-              ТОВАРІВ ПОВСЯКДЕННОГО ВЖИТКУ
-            </p>
-            <p>
-              <img alt="" class="center-block" src="img/computer.png">
-              ІНТЕРНЕТ МАГАЗИНІВ
-            </p>
-            <p>
-              <img alt="" class="center-block" src="img/business.png">
-              МАЛОГО ТА СЕРЕДНЬОГО БІЗНЕСУ
-            </p>
-            <p>
-              <img alt="" class="center-block" src="img/truck.png">
-              ПЕРЕЇЗДУ / РЕМОНТУ
-            </p>
+        <div class="col-md-6 part-two hidden-xs hidden-sm" (mouseover)="onCapabilitiesMouseover('2')">
+          <div class="row store_item item_margin_bottom">
+            <div class="col-sm-1 col-xs-offset-6">
+              <img class="pull-left" src="img/house.png">
+            </div>
+            <div class="col-sm-5">
+              <p class="pull-left">СКЛАД ДЛЯ ЗБЕРІГАННЯ
+                <br> ТОВАРІВ ПОВСЯКДЕННОГО ВЖИТКУ</p>
+            </div>
+          </div>
+          <div class="row store_item item_margin_bottom">
+            <div class="col-sm-1 col-xs-offset-6">
+              <img class="pull-left" src="img/computer.png">
+            </div>
+            <div class="col-sm-5">
+              <p class="pull-left">СКЛАД ДЛЯ ІНТЕРНЕТ
+                <br> МАГАЗИНІВ</p>
+            </div>
+          </div>
+          <div class="row store_item item_margin_bottom">
+            <div class="col-sm-1 col-xs-offset-6">
+              <img class="pull-left" src="img/business.png">
+            </div>
+            <div class="col-sm-5">
+              <p class="pull-left">МІНІ-СКЛАД ДЛЯ МАЛОГО
+                <br> ТА СЕРЕДНЬОГО БІЗНЕСУ</p>
+            </div>
+          </div>
+          <div class="row store_item">
+            <div class="col-sm-1 col-xs-offset-6">
+              <img class="pull-left" src="./img/truck.png">
+            </div>
+            <div class="col-sm-5">
+              <p class="pull-left">СКЛАД ДЛЯ ПЕРЕЇЗДУ /
+                <br> РЕМОНТУ</p>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="mobile-capabilities">
+      <p class="title text-right">СКЛАД</p>
+      <p class="title text-left">ДЛЯ:</p>
+      <p>
+        <img alt="" class="center-block" src="img/sport.png"> ЗБЕРІГАННЯ СПОРТ. СПОРЯДЖЕННЯ
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/doc.png"> ЗБЕРІГАННЯ ДОКУМЕНТІВ
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/WAREHOUSE.png"> ЗБЕРІГАННЯ СЕЗОННИХ ТОВАРІВ
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/work_tool.png"> ЗБЕРІГАННЯ ІНСТРУМЕНТІВ / ЗАПЧАСТИН
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/house.png"> ТОВАРІВ ПОВСЯКДЕННОГО ВЖИТКУ
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/computer.png"> ІНТЕРНЕТ МАГАЗИНІВ
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/business.png"> МАЛОГО ТА СЕРЕДНЬОГО БІЗНЕСУ
+      </p>
+      <p>
+        <img alt="" class="center-block" src="img/truck.png"> ПЕРЕЇЗДУ / РЕМОНТУ
+      </p>
+    </div>
+  </div>
 </section>
 <!-------------------------------------------------------- Choice ------------------------------------------------------------------------------------>
 <section id="choice">
-    <div class="container choice furore_regular">
-        <div class="row text-center">
-            <span>рішення для зберігання вашого майна</span>
-            <br>
-            <img class="logo_second img-responsive" src="img/logo_boxer.png" alt="Logo">
-        </div>
+  <div class="container choice furore_regular">
+    <div class="row text-center">
+      <span>рішення для зберігання вашого майна</span>
+      <br>
+      <img class="logo_second img-responsive" src="img/logo_boxer.png" alt="Logo">
     </div>
+  </div>
 </section>
 <!-------------------------------------------------------- Store ---------------------------------------------------------------------------------->
 <section id="store">
-    <div class="container">
-        <div class="row text-center header_text furore_regular hidden-xs hidden-sm">
-            <span>Чотири кроки для оренди складу</span>
-            <br>
+  <div class="container">
+    <div class="row text-center header_text furore_regular hidden-xs hidden-sm">
+      <span>Чотири кроки для оренди складу</span>
+      <br>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="text-center allowed furore_regular">
+          <img class="can_store_img img-responsive" src="img/Untitled-1.png" alt="Can store">
+          <br>
+          <h4>речі, які можливо
+            <br> зберігати на складі
+            <br>індивідуального зберігання</h4>
+        </div>
+      </div>
+      <div class="col-md-4 four_steps jura_medium hidden-xs hidden-sm">
+        <div class="row">
+          <p class="col-sm-5 col-xs-offset-2 select_size_text">Оберіть розмір
+            <br> боксу та
+            <br> термін оренди</p>
+          <p class="col-sm-5 pac_stuff_text">пакуйте речі
+            <br> та зберігайте їх
+            <br> у вашому боксі
+            <br> складу BOXER</p>
         </div>
         <div class="row text-center">
-            <div class="col-md-4">
-                <div class="text-center allowed furore_regular">
-                    <img class="can_store_img img-responsive" src="img/Untitled-1.png" alt="Can store"><br>
-                    <h4>речі, які можливо <br> зберігати на складі <br>індивідуального зберігання</h4>
-                </div>
-            </div>
-            <div class="col-md-4 four_steps jura_medium hidden-xs hidden-sm">
-                <div class="row">
-                    <p class="col-sm-5 col-xs-offset-2 select_size_text">Оберіть розмір <br> боксу та <br> термін оренди</p>
-                    <p class="col-sm-5 pac_stuff_text">пакуйте речі <br> та зберігайте їх <br> у вашому боксі <br> складу BOXER</p>
-                </div>
-                <div class="row text-center">
-                    <img class="four_steps_img" src="img/4steps.png" alt="Four steps"><br>
-                </div>
-                <div class="row">
-                    <p class="col-sm-4 find_us_text">знайдіть нас</p>
-                    <p class="col-sm-5 col-xs-offset-1 booking_box_text">забронюйте бокс і <br> чекайте на дзвінок <br> від менеджера</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="text-center prohibited furore_regular ">
-                    <img class="cant_store_img img-responsive" src="img/Untitled-2.png" alt="Can`t store"><br>
-                    <h4>речі, які неможливо <br> зберігати на складі <br> індивідуального зберігання</h4>
-                </div>
-            </div>
+          <img class="four_steps_img" src="img/4steps.png" alt="Four steps">
+          <br>
         </div>
-        <div class="steps-mobile visible-xs visible-sm">
-            <div class="row text-center header_text furore_regular visible-xs visible-sm">
-              <span>Чотири кроки для оренди складу</span>
-            </div>
-            <img class="img-responsive center-block" src="img/4steps.png" alt="Four steps">
-            <ul>
-              <li>Знайдіть нас.</li>
-              <li>Оберіть розмір боксу та термін оренди.</li>
-              <li>Забронюйте бокс і чекайте на дзвінок від менеджера.</li>
-              <li>Пакуйте речі та зберігайте їх у вашому боксі складу BOXER.</li>
-            </ul>
+        <div class="row">
+          <p class="col-sm-4 find_us_text">знайдіть нас</p>
+          <p class="col-sm-5 col-xs-offset-1 booking_box_text">забронюйте бокс і
+            <br> чекайте на дзвінок
+            <br> від менеджера</p>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="text-center prohibited furore_regular ">
+          <img class="cant_store_img img-responsive" src="img/Untitled-2.png" alt="Can`t store">
+          <br>
+          <h4>речі, які неможливо
+            <br> зберігати на складі
+            <br> індивідуального зберігання</h4>
+        </div>
+      </div>
     </div>
+    <div class="steps-mobile visible-xs visible-sm">
+      <div class="row text-center header_text furore_regular visible-xs visible-sm">
+        <span>Чотири кроки для оренди складу</span>
+      </div>
+      <img class="img-responsive center-block" src="img/4steps.png" alt="Four steps">
+      <ul>
+        <li>Знайдіть нас.</li>
+        <li>Оберіть розмір боксу та термін оренди.</li>
+        <li>Забронюйте бокс і чекайте на дзвінок від менеджера.</li>
+        <li>Пакуйте речі та зберігайте їх у вашому боксі складу BOXER.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 <!-------------------------------------------------------- Booking ---------------------------------------------------------------------------------->
 <section id="booking">
-    <div class="container">
-        <div class="row jura_bold">
-            <div class="calculator col-md-10 col-md-offset-1">
-                <div class="row from_header text-center furore_regular">
-                    <h4>КАЛЬКУЛЯТОР ВАРТОСТІ ОРЕНДИ СКЛАДУ ІНДИВІДУАЛЬНОГО ЗБЕРІГАННЯ</h4>
-                </div>
-                <div class="row">
-                    <div class="col-md-5 col-md-offset-1 text-center">
-                        <div class="row">
-                            <br>
-                            <p class="box_size_text">розмір боксу</p>
-                            <div #sizeBtns id='boxSizeBtns' class="btn-toolbar text-center box_size_btns">
-                                <button type="button" id='1m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default one_m_btn">1м<sup>3</sup></button>
-                                <button type="button" id='2.5m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default two_m_btn">2.5м<sup>2</sup></button>
-                                <button type="button" id='3m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">3м<sup>2</sup></button>
-                                <button type="button" id='4m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">4м<sup>2</sup></button>
-                                <button type="button" id='5m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">5м<sup>2</sup></button>
-                                <button type="button" id='6m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">6м<sup>2</sup></button>
-                                <button type="button" id='7m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">7м<sup>2</sup></button>
-                                <button type="button" id='12m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default twelve_m_btn">12м<sup>2</sup></button>
-                            </div>
-                            <br>
-                        </div>
-                        <div class="row">
-                            <div class="text-center">
-                                <p class='tersm_text'>термін зберігання</p>
-                            </div>
-                        </div>
-                        <div class="row dates">
-                            <div class="text-left">
-                                <label class="calculator_text_color_blue" for="datePickerFrom">перший день оренди</label>
-                                <p-calendar class="date_picker" id='datePickerFrom' [(ngModel)]="dateFrom" readonlyInput="readonlyInput" dateFormat="dd/mm/yy" inputStyleClass='calendar_input'></p-calendar>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="text-center">
-                                <p class='days_count'>{{daysCount >= 7 ? 'кількість днів: ' + daysCount: 'кількість днів'}}</p>
-                                <br>
-                                <div class="slider_days">
-                                    <p-slider [(ngModel)]="daysCount" [min]='minSlide' [max]='maxSlide' [animate]='true' name='daysSlider' [step]="1" (onSlideEnd)='onSlideEnd()'></p-slider>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div #termsBtns id="termsBtns" class="btn-toolbar terms_btns">
-                                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='1w' class="btn btn-default">1 тиж</button>
-                                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='1m' class="btn btn-default">до 1 міс</button>
-                                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='3m' class="btn btn-default">1-3 міс</button>
-                                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='6m' class="btn btn-default">3-6 міс</button>
-                                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='1y' class="btn btn-default">6-12 міс</button>
-                            </div>
-                        </div>
-                        <div class="row package_materials text-left">
-                            <img src="./img/add-materials.png" alt="Add materials" />
-                            <a class='package_materials_link' href="#" data-toggle="modal" data-target="#packagesModal">
-                                <u>пакувальні матеріали</u>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-md-offset-1">
-                        <div class="row text-center">
-                            <div class="box_img">
-                                <img class="img-responsive" [src]="boxImgSrcFull" alt="Box-12m" />
-                            </div>
-                        </div>
-                        <div class="row text-center prices_text">
-                            <p class="month_pay">ціна за місяць: {{monthPay}} грн</p>
-                            <p class="period_pay">ціна за обраний період: {{periodPay}} грн</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="booking_btn_wrapper text-center">
-                        <button class="btn btn-default" [ngClass]="this.boxSize >= 1 && this.daysCount >= 7 ? '' : 'hide'" data-toggle="modal" data-target="#bookingModal" (click)='openBookingModal()'>
-                            забронювати
-                        </button>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row jura_bold">
+      <div class="calculator col-md-10 col-md-offset-1">
+        <div class="row from_header text-center furore_regular">
+          <h4>КАЛЬКУЛЯТОР ВАРТОСТІ ОРЕНДИ СКЛАДУ ІНДИВІДУАЛЬНОГО ЗБЕРІГАННЯ</h4>
         </div>
+        <div class="row">
+          <div class="col-md-5 col-md-offset-1 text-center">
+            <div class="row">
+              <br>
+              <p class="box_size_text">розмір боксу</p>
+              <div #sizeBtns id='boxSizeBtns' class="btn-toolbar text-center box_size_btns">
+                <button type="button" id='1m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default one_m_btn">1м
+                  <sup>3</sup>
+                </button>
+                <button type="button" id='2m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">2м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='2.5m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default two_m_btn">2.5м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='3m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">3м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='4m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">4м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='5m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">5м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='6m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">6м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='7m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">7м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='8m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">8м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='9m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">9м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='10m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">10м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='11m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default">11м
+                  <sup>2</sup>
+                </button>
+                <button type="button" id='12m_btn' (click)='onBtnSizeClick($event.currentTarget)' class="btn btn-default twelve_m_btn">12м
+                  <sup>2</sup>
+                </button>
+              </div>
+              <br>
+            </div>
+            <div class="row">
+              <div class="text-center">
+                <p class='tersm_text'>термін зберігання</p>
+              </div>
+            </div>
+            <div class="row dates">
+              <div class="text-left">
+                <label class="calculator_text_color_blue" for="datePickerFrom">перший день оренди</label>
+                <p-calendar class="date_picker" id='datePickerFrom' [(ngModel)]="dateFrom" readonlyInput="readonlyInput" dateFormat="dd/mm/yy"
+                  inputStyleClass='calendar_input'></p-calendar>
+              </div>
+            </div>
+            <div class="row">
+              <div class="text-center">
+                <p class='days_count'>{{daysCount >= 7 ? 'кількість днів: ' + daysCount: 'кількість днів'}}</p>
+                <br>
+                <div class="slider_days">
+                  <p-slider [(ngModel)]="daysCount" [min]='minSlide' [max]='maxSlide' [animate]='true' name='daysSlider' [step]="1" (onSlideEnd)='onSlideEnd()'></p-slider>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div #termsBtns id="termsBtns" class="btn-toolbar terms_btns">
+                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='less_2m' class="btn btn-default">до 2 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='more_2m' class="btn btn-default">від 2 міс</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-md-offset-1">
+            <div class="row text-center">
+              <div class="box_img">
+                <img class="img-responsive" [src]="boxImgSrcFull" alt="Box-12m" />
+              </div>
+            </div>
+            <div class="row text-center prices_text">
+              <p class="month_pay">ціна за місяць: {{monthPay}} грн</p>
+              <p class="period_pay">ціна за обраний період: {{periodPay}} грн</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="booking_btn_wrapper text-center">
+            <button class="btn btn-default" [ngClass]="this.boxSize >= 1 && this.daysCount >= 7 ? '' : 'hide'" data-toggle="modal" data-target="#bookingModal"
+              (click)='openBookingModal()'>
+              забронювати
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-------------------------------------------------------- Gallery ---------------------------------------------------------------------------------->
 <section id="gallery">
-    <div class="container">
-        <div id="slider">
-            <input type="radio" id="button-1" name="controls" />
-            <input type="radio" id="button-2" name="controls" checked />
-            <input type="radio" id="button-3" name="controls" />
-            <input type="radio" id="button-4" name="controls" />
-            <input type="radio" id="button-5" name="controls" />
-            <label for="button-1" class="arrows" id="arrow-1">></label>
-            <label for="button-2" class="arrows" id="arrow-2">></label>
-            <label for="button-3" class="arrows" id="arrow-3">></label>
-            <label for="button-4" class="arrows" id="arrow-4">></label>
-            <label for="button-5" class="arrows" id="arrow-5">></label>
-            <div id="slides">
-                <div class='tk-museo-sans'>
-                    <span id="image-1"></span>
-                    <span id="image-2"></span>
-                    <span id="image-3"></span>
-                    <span id="image-4"></span>
-                    <span id="image-5"></span>
-                </div>
-            </div>
+  <div class="container">
+    <div id="slider">
+      <input type="radio" id="button-1" name="controls" />
+      <input type="radio" id="button-2" name="controls" checked />
+      <input type="radio" id="button-3" name="controls" />
+      <input type="radio" id="button-4" name="controls" />
+      <input type="radio" id="button-5" name="controls" />
+      <label for="button-1" class="arrows" id="arrow-1">></label>
+      <label for="button-2" class="arrows" id="arrow-2">></label>
+      <label for="button-3" class="arrows" id="arrow-3">></label>
+      <label for="button-4" class="arrows" id="arrow-4">></label>
+      <label for="button-5" class="arrows" id="arrow-5">></label>
+      <div id="slides">
+        <div class='tk-museo-sans'>
+          <span id="image-1"></span>
+          <span id="image-2"></span>
+          <span id="image-3"></span>
+          <span id="image-4"></span>
+          <span id="image-5"></span>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 <!-------------------------------------------------------- Advantages -------------------------------------------------------------------------------->
 <section id="advantages">
-    <div class="container furore_regular">
-        <div class="advantages">
-            <div class="row text-center prices_text ">
-                <h4>переваги складу індивідуального зберіганя boxer</h4>
-                <hr style='height: 2px; background-color: #ffffff; margin: 0 18em 0 18em;'>
-            </div>
-            <div class="row text-center advantages_items">
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <img src="./img/advantages-1.png" class="img-responsive" alt="Advantages">
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <img src="./img/advantages-2.png" class="img-responsive" alt="Advantages">
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <img src="./img/advantages-3.png" class="img-responsive" alt="Advantages">
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-6">
-                    <img src="./img/advantages-4.png" class="img-responsive" alt="Advantages">
-                </div>
-            </div>
+  <div class="container furore_regular">
+    <div class="advantages">
+      <div class="row text-center prices_text ">
+        <h4>переваги складу індивідуального зберіганя boxer</h4>
+        <hr style='height: 2px; background-color: #ffffff; margin: 0 18em 0 18em;'>
+      </div>
+      <div class="row text-center advantages_items">
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <img src="./img/advantages-1.png" class="img-responsive" alt="Advantages">
         </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <img src="./img/advantages-2.png" class="img-responsive" alt="Advantages">
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <img src="./img/advantages-3.png" class="img-responsive" alt="Advantages">
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-6">
+          <img src="./img/advantages-4.png" class="img-responsive" alt="Advantages">
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-------------------------------------------------------- Modals -------------------------------------------------------------------------------->
 <!-- Booking Modal -->
 <div id="bookingModal" class="modal fade booking_modal" role="dialog" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
+  <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header furore_regular">
-                <span>ваші дані</span>
-                <button type="button" class="close" data-dismiss="modal"><span class="close_btn">&times;</span></button>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header furore_regular">
+        <span>ваші дані</span>
+        <button type="button" class="close" data-dismiss="modal">
+          <span class="close_btn">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body caviar_regular">
+        <form id="bookingForm" name="BookingForm" #bookingForm="ngForm">
+          <div class="row">
+            <div class="col-xs-6 left_part">
+              <div class="row title">ІМ’Я</div>
+              <div class="row">
+                <div class="name_field">
+                  <input type="text" [ngClass]="Name.valid || Name.pristine ? '' : 'alert_input'" title="Це поле є обов'язковим" class="form-control"
+                    id="name" name="Name" required [(ngModel)]="name" #Name="ngModel">
+                </div>
+              </div>
+              <div class="row title">ТЕЛЕФОН</div>
+              <div class="row">
+                <div class="tel_field">
+                  <input type="text" [ngClass]="number.valid || number.pristine ? '' : 'alert_input'" title="Це поле є обов'язковим" class="form-control"
+                    id="number" name="number" required pattern="((\+380|0)([0-9]{9}))?$" placeholder="+380931010101" [(ngModel)]="mobileNumber"
+                    #number="ngModel">
+                </div>
+              </div>
             </div>
-            <div class="modal-body caviar_regular">
-                <form id="bookingForm" name="BookingForm" #bookingForm="ngForm">
-                    <div class="row">
-                        <div class="col-xs-6 left_part">
-                            <div class="row title">ІМ’Я</div>
-                            <div class="row">
-                                <div class="name_field">
-                                    <input type="text" [ngClass]="Name.valid || Name.pristine ? '' : 'alert_input'" title="Це поле є обов'язковим" class="form-control" id="name" name="Name" required [(ngModel)]="name" #Name="ngModel">
-                                </div>
-                            </div>
-                            <div class="row title">ТЕЛЕФОН</div>
-                            <div class="row">
-                                <div class="tel_field">
-                                    <input type="text" [ngClass]="number.valid || number.pristine ? '' : 'alert_input'" title="Це поле є обов'язковим" class="form-control" id="number" name="number" required pattern="((\+380|0)([0-9]{9}))?$" placeholder="+380931010101" [(ngModel)]="mobileNumber"
-                                        #number="ngModel">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 right_part">
-                            <div class="row title">ПРІЗВИЩЕ</div>
-                            <div class="row">
-                                <div class="name_field">
-                                    <input type="text" [ngClass]="Surname.valid || Surname.pristine ? '' : 'alert_input'" title="Це поле є обов'язковим" class="form-control" id="Surname" name="Surname" required [(ngModel)]="surname" #Surname="ngModel">
-                                </div>
-                            </div>
-                            <div class="row title">EMAIL</div>
-                            <div class="row">
-                                <div class="tel_field">
-                                    <input type="email" [ngClass]="Email.valid || Email.pristine ? '' : 'alert_input'" placeholder="some@email.com" title="Це поле є обов'язковим" class="form-control" id="Email" name="Email" required [(ngModel)]="email" #Email="ngModel" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <span class="comment_title col-xs-12">КОМЕНТАР</span>
-                    </div>
-                    <div class="row">
-                        <div class="comment_textarea">
-                            <textarea class='form-control' name="Comments" [(ngModel)]='comments' rows="6" cols="10"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="order_details">
-                            <span class="your_booking_text furore_regular">Ваше замовлення</span>
-                            <div class="caviar_bold main_booking_section">
-                                <div class="booking_desc">Термін зберігання
-                                    <div class="circle_count badge">{{daysCount}} днів</div>
-                                </div>
-                                <div class="booking_desc">Починаючи з <span class="date_periods">&nbsp;{{dateFromStr}}&nbsp;</span> до <span class="date_periods">&nbsp;{{dateToStr}}&nbsp;</span></div>
-                                <div class="booking_desc">Розмір боксу
-                                    <div class="circle_count badge">{{boxSize}}м<sup>{{boxSizeStrM}}</sup></div>
-                                </div>
-
-                                <div *ngIf="showPackageMaterialsOnBooking" class="">
-                                    <div class="booking_desc">Пакувальі матеріали:</div>
-                                    <div class="booking_desc_items">
-                                        <div *ngIf="countBoxes > 0">
-                                            <span class="package_desc">
-                                     Коробки &nbsp;
-                                 </span>
-                                            <div class="circle_count badge">{{countBoxes}}</div>
-                                        </div>
-                                        <div *ngIf="countLocksAndShelves > 0">
-                                            <span class="package_desc">
-                                     Замки/стелажі &nbsp;
-                                 </span>
-                                            <div class="circle_count badge">{{countLocksAndShelves}}</div>
-                                        </div>
-                                        <div *ngIf="countPackages > 0">
-                                            <span class="package_desc">
-                                     Плівки/пакети &nbsp;
-                                 </span>
-                                            <div class="circle_count badge">{{countPackages}}</div>
-                                        </div>
-                                        <div *ngIf="countOthers > 0">
-                                            <span class="package_desc">
-                                     Інші матеріали &nbsp;
-                                 </span>
-                                            <div class="circle_count badge">{{countOthers}}</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row text-right caviar_bold">
-                        <div class="col-md-12 final_price_text">
-                            <u>Загальна сума</u>
-                        </div>
-                    </div>
-                    <div class="row text-right caviar_bold">
-                        <div class="col-md-12 final_price">
-                            {{finalPrice}}&nbsp;грн
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="booking_btn_wrapper text-center">
-                            <button type="button" class="btn btn-default" data-dismiss="modal" [disabled]="!bookingForm.form.valid" (click)="sendMail($event)">надіслати</button>
-                        </div>
-                    </div>
-                </form>
+            <div class="col-xs-6 right_part">
+              <div class="row title">ПРІЗВИЩЕ</div>
+              <div class="row">
+                <div class="name_field">
+                  <input type="text" [ngClass]="Surname.valid || Surname.pristine ? '' : 'alert_input'" title="Це поле є обов'язковим" class="form-control"
+                    id="Surname" name="Surname" required [(ngModel)]="surname" #Surname="ngModel">
+                </div>
+              </div>
+              <div class="row title">EMAIL</div>
+              <div class="row">
+                <div class="tel_field">
+                  <input type="email" [ngClass]="Email.valid || Email.pristine ? '' : 'alert_input'" placeholder="some@email.com" title="Це поле є обов'язковим"
+                    class="form-control" id="Email" name="Email" required [(ngModel)]="email" #Email="ngModel" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}">
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
+          <div class="row">
+            <span class="comment_title col-xs-12">КОМЕНТАР</span>
+          </div>
+          <div class="row">
+            <div class="comment_textarea">
+              <textarea class='form-control' name="Comments" [(ngModel)]='comments' rows="6" cols="10"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="order_details">
+              <span class="your_booking_text furore_regular">Ваше замовлення</span>
+              <div class="caviar_bold main_booking_section">
+                <div class="booking_desc">Термін зберігання
+                  <div class="circle_count badge">{{daysCount}} днів</div>
+                </div>
+                <div class="booking_desc">Починаючи з
+                  <span class="date_periods">&nbsp;{{dateFromStr}}&nbsp;</span> до
+                  <span class="date_periods">&nbsp;{{dateToStr}}&nbsp;</span>
+                </div>
+                <div class="booking_desc">Розмір боксу
+                  <div class="circle_count badge">{{boxSize}}м
+                    <sup>{{boxSizeStrM}}</sup>
+                  </div>
+                </div>
 
+                <div *ngIf="showPackageMaterialsOnBooking" class="">
+                  <div class="booking_desc">Пакувальі матеріали:</div>
+                  <div class="booking_desc_items">
+                    <div *ngIf="countBoxes > 0">
+                      <span class="package_desc">
+                        Коробки &nbsp;
+                      </span>
+                      <div class="circle_count badge">{{countBoxes}}</div>
+                    </div>
+                    <div *ngIf="countLocksAndShelves > 0">
+                      <span class="package_desc">
+                        Замки/стелажі &nbsp;
+                      </span>
+                      <div class="circle_count badge">{{countLocksAndShelves}}</div>
+                    </div>
+                    <div *ngIf="countPackages > 0">
+                      <span class="package_desc">
+                        Плівки/пакети &nbsp;
+                      </span>
+                      <div class="circle_count badge">{{countPackages}}</div>
+                    </div>
+                    <div *ngIf="countOthers > 0">
+                      <span class="package_desc">
+                        Інші матеріали &nbsp;
+                      </span>
+                      <div class="circle_count badge">{{countOthers}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row text-right caviar_bold">
+            <div class="col-md-12 final_price_text">
+              <u>Загальна сума</u>
+            </div>
+          </div>
+          <div class="row text-right caviar_bold">
+            <div class="col-md-12 final_price">
+              {{finalPrice}}&nbsp;грн
+            </div>
+          </div>
+          <div class="row">
+            <div class="booking_btn_wrapper text-center">
+              <button type="button" class="btn btn-default" data-dismiss="modal" [disabled]="!bookingForm.form.valid" (click)="sendMail($event)">надіслати</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+
+  </div>
 </div>
 
 <!-- Packages Modal -->
 <div id="packagesModal" class="modal fade packages_modal" role="dialog" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
+  <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header furore_regular">
-                <span>пакувальні матеріали</span>
-                <button type="button" class="close" data-dismiss="modal" (click)="closePackageModal()"><span class="close_btn">&times;</span></button>
-            </div>
-            <div class="modal-body caviar_regular">
-                <div class="row">
-                    <div class="package_tabs">
-                        <ul class="nav nav-tabs">
-                            <li role="presentation" class="active"><a class="" href="#boxes" data-toggle="tab">коробки</a></li>
-                            <li role="presentation" class=""><a class="" href="#locksAndShelves" data-toggle="tab">замки/стелажі</a></li>
-                            <li role="presentation" class=""><a class="" href="#packages" data-toggle="tab">плівки/пакети</a></li>
-                            <li role="presentation" class=""><a class="" href="#others" data-toggle="tab">інші матеріали</a></li>
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header furore_regular">
+        <span>пакувальні матеріали</span>
+        <button type="button" class="close" data-dismiss="modal" (click)="closePackageModal()">
+          <span class="close_btn">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body caviar_regular">
+        <div class="row">
+          <div class="package_tabs">
+            <ul class="nav nav-tabs">
+              <li role="presentation" class="active">
+                <a class="" href="#boxes" data-toggle="tab">коробки</a>
+              </li>
+              <li role="presentation" class="">
+                <a class="" href="#locksAndShelves" data-toggle="tab">замки/стелажі</a>
+              </li>
+              <li role="presentation" class="">
+                <a class="" href="#packages" data-toggle="tab">плівки/пакети</a>
+              </li>
+              <li role="presentation" class="">
+                <a class="" href="#others" data-toggle="tab">інші матеріали</a>
+              </li>
+            </ul>
+
+            <div class="tab-content clearfix caviar_bold">
+              <div class="tab-pane active" id='boxes'>
+                <ul class="list-group">
+                  <li [id]='item.id' class="list-group-item" *ngFor="let item of boxes;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <img class="package-img" [src]="item.imgSrc" alt="">
+                      </div>
+                      <div class="col-md-5 text-left">
+                        <ul class="package_desc">
+                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                            {{desc}}
+                          </li>
                         </ul>
-
-                        <div class="tab-content clearfix caviar_bold">
-                            <div class="tab-pane active" id='boxes'>
-                                <ul class="list-group">
-                                    <li [id]='item.id' class="list-group-item" *ngFor="let item of boxes;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                                        <div class="row">
-                                            <div class="col-md-3 text-center">
-                                                <img class="package-img" [src]="item.imgSrc" alt="">
-                                            </div>
-                                            <div class="col-md-5 text-left">
-                                                <ul class="package_desc">
-                                                    <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                                                        {{desc}}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4 text-center inputs">
-                                                <div class="counters input-group">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                                                    </span>
-                                                    <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                                                    <span class="input-group-btn">
-                                                        <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                                                    </span>
-                                                </div>
-                                                ціна: {{item.price}}&nbsp;грн
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id='locksAndShelves'>
-                                <ul class="list-group">
-                                    <li [id]='item.id' class="list-group-item" *ngFor="let item of locksAndShelves;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                                        <div class="row">
-                                            <div class="col-md-3 text-center">
-                                                <img class="package-img" [src]="item.imgSrc" alt="">
-                                            </div>
-                                            <div class="col-md-5 text-left">
-                                                <ul class="package_desc">
-                                                    <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                                                        {{desc}}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4 text-center inputs">
-                                                <div class="counters input-group">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                                                    </span>
-                                                    <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                                                    <span class="input-group-btn">
-                                                        <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                                                    </span>
-                                                </div>
-                                                ціна: {{item.price}}&nbsp;грн
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id='packages'>
-                                <ul class="list-group">
-                                    <li [id]='item.id' class="list-group-item" *ngFor="let item of packages;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                                        <div class="row">
-                                            <div class="col-md-3 text-center">
-                                                <img class="package-img" [src]="item.imgSrc" alt="">
-                                            </div>
-                                            <div class="col-md-5 text-left">
-                                                <ul class="package_desc">
-                                                    <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                                                        {{desc}}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4 text-center inputs">
-                                                <div class="counters input-group">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                                                    </span>
-                                                    <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                                                    <span class="input-group-btn">
-                                                        <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                                                    </span>
-                                                </div>
-                                                ціна: {{item.price}}&nbsp;грн
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane" id='others'>
-                                <ul class="list-group">
-                                    <li [id]='item.id' class="list-group-item" *ngFor="let item of others;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                                        <div class="row">
-                                            <div class="col-md-3 text-center">
-                                                <img class="package-img" [src]="item.imgSrc" alt="">
-                                            </div>
-                                            <div class="col-md-5 text-left">
-                                                <ul class="package_desc">
-                                                    <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                                                        {{desc}}
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-4 text-center inputs">
-                                                <div class="counters input-group">
-                                                    <span class="input-group-btn">
-                                                        <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                                                    </span>
-                                                    <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                                                    <span class="input-group-btn">
-                                                        <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                                                    </span>
-                                                </div>
-                                                ціна: {{item.price}}&nbsp;грн
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                      </div>
+                      <div class="col-md-4 text-center inputs">
+                        <div class="counters input-group">
+                          <span class="input-group-btn">
+                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
+                          </span>
+                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
+                          <span class="input-group-btn">
+                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
+                          </span>
                         </div>
+                        ціна: {{item.price}}&nbsp;грн
+                      </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="booking_btn_wrapper text-center">
-                        <button type="button" class="btn btn-default" (click)="bookPackages()" data-dismiss="modal">зберегти</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" id='locksAndShelves'>
+                <ul class="list-group">
+                  <li [id]='item.id' class="list-group-item" *ngFor="let item of locksAndShelves;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <img class="package-img" [src]="item.imgSrc" alt="">
+                      </div>
+                      <div class="col-md-5 text-left">
+                        <ul class="package_desc">
+                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                            {{desc}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4 text-center inputs">
+                        <div class="counters input-group">
+                          <span class="input-group-btn">
+                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
+                          </span>
+                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
+                          <span class="input-group-btn">
+                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
+                          </span>
+                        </div>
+                        ціна: {{item.price}}&nbsp;грн
+                      </div>
                     </div>
-                </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" id='packages'>
+                <ul class="list-group">
+                  <li [id]='item.id' class="list-group-item" *ngFor="let item of packages;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <img class="package-img" [src]="item.imgSrc" alt="">
+                      </div>
+                      <div class="col-md-5 text-left">
+                        <ul class="package_desc">
+                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                            {{desc}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4 text-center inputs">
+                        <div class="counters input-group">
+                          <span class="input-group-btn">
+                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
+                          </span>
+                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
+                          <span class="input-group-btn">
+                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
+                          </span>
+                        </div>
+                        ціна: {{item.price}}&nbsp;грн
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" id='others'>
+                <ul class="list-group">
+                  <li [id]='item.id' class="list-group-item" *ngFor="let item of others;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
+                    <div class="row">
+                      <div class="col-md-3 text-center">
+                        <img class="package-img" [src]="item.imgSrc" alt="">
+                      </div>
+                      <div class="col-md-5 text-left">
+                        <ul class="package_desc">
+                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
+                            {{desc}}
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4 text-center inputs">
+                        <div class="counters input-group">
+                          <span class="input-group-btn">
+                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
+                          </span>
+                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
+                          <span class="input-group-btn">
+                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
+                          </span>
+                        </div>
+                        ціна: {{item.price}}&nbsp;грн
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="row">
+          <div class="booking_btn_wrapper text-center">
+            <button type="button" class="btn btn-default" (click)="bookPackages()" data-dismiss="modal">зберегти</button>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

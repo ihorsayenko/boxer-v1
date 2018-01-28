@@ -124,7 +124,6 @@ export class MainComponent implements OnInit {
                     element.classList.add('active_btn');
                     this.activeSizeBtb = element;
                     this.boxSize = Number(id.split('m')[0]);
-                    console.log(this.boxSize);
                     this.boxSizeStr = this.boxSize === 1 ? this.boxSize + "м<sup>3</sup>" : this.boxSize + "м<sup>2</sup>";
                     this.boxSizeStrM = this.boxSize == 1 ? "3" : "2";
                 }
@@ -150,20 +149,11 @@ export class MainComponent implements OnInit {
             }
         }
         switch (id) {
-            case '1w':
-                this.daysCount = 7;
+            case 'less_2m':
+                this.daysCount = 60;
                 break;
-            case '1m':
-                this.daysCount = 30;
-                break;
-            case '3m':
-                this.daysCount = 90;
-                break;
-            case '6m':
-                this.daysCount = 180;
-                break;
-            case '1y':
-                this.daysCount = 360;
+            case 'more_2m':
+                this.daysCount = 61;
                 break;
         }
 
@@ -288,26 +278,26 @@ export class MainComponent implements OnInit {
         if (this.boxSize > 1 && this.daysCount > 0) {
             let price;
 
-            if (this.daysCount <= 30) {
-                price = this.data.Less30;
-            } else if (this.daysCount <= 90) {
-                price = this.data.Less90;
-            } else if (this.daysCount <= 180) {
-                price = this.data.Less180;
-            } else if (this.daysCount <= 360) {
-                price = this.data.Less360;
+            if (this.daysCount <= 60) {
+                price = this.data.Less60;
+            } else {
+                price = this.data.More60;
             }
 
             this.periodPay = Math.round(price * this.boxSize * this.daysCount);
 
             if (this.daysCount <= 30) {
                 this.monthPay = Math.round(price * this.boxSize * 30);
-            }else{
+            } else {
                 this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
             }
         } else if (this.boxSize == 1 && this.daysCount > 0) {
-            this.periodPay = Math.round(Number(this.data.OneM3) * this.boxSize * this.daysCount);
+            var omeM3Price = (this.daysCount <= 60) ? this.data.More60 : this.data.Less60;
+            this.periodPay = Math.round(Number(omeM3Price) * this.boxSize * this.daysCount);
             this.monthPay = Math.round(30 * this.periodPay / this.daysCount);
+        }
+        else {
+            return;
         }
 
         let date = new Date(this.dateFrom);
@@ -402,7 +392,7 @@ export class MainComponent implements OnInit {
         body.append('bodyHTML', bodyHtml);
         body.append('isTransactional', 'false');
 
-        this.http.post(url, body, headers).subscribe(resp => {
+        this.http.post(url, body, { headers: headers }).subscribe(resp => {
             if (resp.json().success) {
                 document.getElementById("successModalBtn").click();
                 this.resetVariables();

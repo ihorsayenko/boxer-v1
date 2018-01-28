@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 
     initVariables(item: CommonModal) {
         this.humidity = item.Humidity;
-        this.temperature = item.Temprature;
+        this.temperature = item.Temperature;
     }
 
     navigateToSection(e: Event, id: string): void {
@@ -77,7 +77,7 @@ export class AppComponent implements OnInit {
         body.append('bodyHTML', emailBody);
         body.append('isTransactional', 'false');
 
-        this.http.post(url, body, headers).subscribe(resp => {
+        this.http.post(url, body, { headers: headers }).subscribe(resp => {
             if (resp.json().success) {
                 document.getElementById("successModalBtn").click();
             } else {
