@@ -56,7 +56,6 @@ export class MainComponent implements OnInit {
     showLocksAndShelves: boolean = false;
     showPackages: boolean = false;
     showOthers: boolean = false;
-    packagesSaved: boolean = false;
 
     countBoxes: number;
     countLocksAndShelves: number;
@@ -65,6 +64,8 @@ export class MainComponent implements OnInit {
 
     packagesPrice: number;
     finalPrice: number = 0;
+    monthCount: number = 0;
+    termStr: string;
 
     galleryPic: any[];
 
@@ -93,8 +94,6 @@ export class MainComponent implements OnInit {
         this.activeSizeBtb.classList.remove('active_btn');
         this.activeTermBtb.classList.remove('active_btn');
         this.boxImgSrcFull = this.imgs[0].imgsrc;
-
-        this.closePackageModal();
     }
 
     ngOnInit(): void {
@@ -134,7 +133,7 @@ export class MainComponent implements OnInit {
         this.calculatePrice();
     }
 
-    onBtnTermClick(elem: Element): void {
+    onBtnTermClick(elem: Element, days: number): void {
         let id = elem.id;
         let btns = this.termsBtns.toArray()[0].nativeElement.children;
 
@@ -148,23 +147,12 @@ export class MainComponent implements OnInit {
                 }
             }
         }
-        switch (id) {
-            case 'less_2m':
-                this.daysCount = 60;
-                break;
-            case 'more_2m':
-                this.daysCount = 61;
-                break;
-        }
+
+        this.daysCount = days;
+        this.monthCount = Math.round(Number(this.daysCount / 30));
+
 
         this.calculatePrice();
-    }
-
-    onSlideEnd(): void {
-        if (this.activeTermBtb) {
-            this.activeTermBtb.classList.remove('active_btn');
-            this.calculatePrice();
-        }
     }
 
     onCapabilitiesMouseover(type): void {
@@ -183,95 +171,9 @@ export class MainComponent implements OnInit {
         }
     }
 
-    resetPackageFlags(): void {
-        this.countBoxes = 0;
-        this.countLocksAndShelves = 0;
-        this.countPackages = 0;
-        this.countOthers = 0;
-        this.packagesPrice = 0;
-
-        this.showBoxes = false;
-        this.showLocksAndShelves = false;
-        this.showOthers = false;
-        this.showPackages = false;
-        this.packagesSaved = false;
-    }
-
     openBookingModal(): void {
-        this.resetPackageFlags()
-
-        if (this.boxes.find(i => i.count > 0)) {
-            let array = this.boxes.filter(i => i.count > 0);
-
-            array.forEach(i => {
-                this.countBoxes += i.count;
-                this.packagesPrice += (i.count * i.price);
-            });
-
-            this.showBoxes = true;
-        }
-        if (this.locksAndShelves.find(i => i.count > 0)) {
-
-            let array = this.locksAndShelves.filter(i => i.count > 0);
-
-            array.forEach(i => {
-                this.countLocksAndShelves += i.count;
-                this.packagesPrice += (i.count * i.price);
-            });
-
-            this.showLocksAndShelves = true;
-        }
-        if (this.packages.find(i => i.count > 0)) {
-            let array = this.packages.filter(i => i.count > 0);
-
-            array.forEach(i => {
-                this.countPackages += i.count;
-                this.packagesPrice += (i.count * i.price);
-            });
-
-            this.showPackages = true;
-        }
-        if (this.others.find(i => i.count > 0)) {
-            let array = this.others.filter(i => i.count > 0);
-
-            array.forEach(i => {
-                this.countOthers += i.count;
-                this.packagesPrice += (i.count * i.price);
-            });
-
-            this.showOthers = true;
-        }
-
-        this.showPackageMaterialsOnBooking = this.showBoxes ||
-            this.showLocksAndShelves ||
-            this.showOthers ||
-            this.showPackages;
-        this.finalPrice = this.periodPay + this.packagesPrice;
-    }
-
-    onCountPlus(item: PackageModel): void { item.count++; }
-
-    onCountMinus(item: PackageModel): void { item.count--; }
-
-    bookPackages(): void {
-        this.packagesSaved = true;
-    }
-
-    closePackageModal(): void {
-        if (!this.packagesSaved) {
-            if (this.boxes.find(i => i.count > 0)) {
-                this.boxes = this.boxesEtalon;
-            }
-            if (this.locksAndShelves.find(i => i.count > 0)) {
-                this.locksAndShelves = this.locksAndShelvesEtalon;
-            }
-            if (this.packages.find(i => i.count > 0)) {
-                this.packages = this.packagesEtalon;
-            }
-            if (this.others.find(i => i.count > 0)) {
-                this.others = this.othersEtalon;
-            }
-        }
+        this.finalPrice = this.periodPay;
+        this.termStr = this.monthCount ? this.monthCount + " міс" : "1 тиж";
     }
 
     calculatePrice(): void {
@@ -301,7 +203,9 @@ export class MainComponent implements OnInit {
         }
 
         let date = new Date(this.dateFrom);
-        let newDate = date.setDate(date.getDate() + this.daysCount);
+        let newDate = (this.monthCount) ?
+            date.setMonth(date.getMonth() + this.monthCount) :
+            date.setDate(date.getDate() + 7);
         let dateTo = new Date(newDate);
         let fromMonth = this.dateFrom.getMonth() + Number(1);
         let toMonth = dateTo.getMonth() + Number(1);
@@ -315,10 +219,17 @@ export class MainComponent implements OnInit {
     collectBodyForEmail(): string {
         let emailBody = "";
         let date = new Date(this.dateFrom);
-        let newDate = date.setDate(date.getDate() + this.daysCount);
+        let newDate = (this.monthCount) ?
+            date.setMonth(date.getMonth() + this.monthCount) :
+            date.setDate(date.getDate() + 7);
         let dateTo = new Date(newDate);
         let fromMonth = this.dateFrom.getMonth() + Number(1);
         let toMonth = dateTo.getMonth() + Number(1);
+
+        this.dateFromStr = this.dateFrom.getDate() + "/" +
+            fromMonth + "/" + this.dateFrom.getFullYear();
+        this.dateToStr = dateTo.getDate() + "/" +
+            toMonth + "/" + dateTo.getFullYear();
 
         emailBody = emailBody.concat("Ім'я:  <b>" + this.name + "</b>");
         emailBody = emailBody.concat("<br>Прізвище:  <b>" + this.surname + "</b>");
@@ -326,45 +237,12 @@ export class MainComponent implements OnInit {
         emailBody = emailBody.concat("<br>Email:  <b>" + this.email + "</b>");
         emailBody = emailBody.concat("<br>Коментар:  <b>" + this.comments + "</b>");
         emailBody = emailBody.concat("<h3>Замовлення:</h3>");
-        emailBody = emailBody.concat("&nbsp;&nbsp;- Термін зберігання: <b>" + this.daysCount + "</b>");
+        emailBody = emailBody.concat("&nbsp;&nbsp;- Термін зберігання: <b>" + this.termStr + "</b>");
         emailBody = emailBody.concat("<br>&nbsp;&nbsp;- Починаючи з <b>[" +
             this.dateFromStr + "]</b>  до <b>[" + this.dateToStr + "]</b>");
         emailBody = emailBody.concat("<br>&nbsp;&nbsp;- Розмір боксу: <b>" + this.boxSizeStr + "</b>");
-        if (this.showPackageMaterialsOnBooking) {
-            emailBody = emailBody.concat("<h3>Пакувальні матеріали:</h3>");
-            this.boxes.filter(i => i.count > 0).forEach(i => {
-                emailBody = emailBody.concat("<br>&nbsp;&nbsp;- " +
-                    i.description.join(" ") + ": " +
-                    i.count + " шт | " +
-                    i.price + " грн/шт | <b>" +
-                    i.count * i.price + " грн</b>");
-            });
-            this.locksAndShelves.filter(i => i.count > 0).forEach(i => {
-                emailBody = emailBody.concat("<br>&nbsp;&nbsp;- " +
-                    i.description.join(" ") + ": " +
-                    i.count + " шт | " +
-                    i.price + " грн/шт | <b>" +
-                    i.count * i.price + " грн</b>");
-            });
-            this.packages.filter(i => i.count > 0).forEach(i => {
-                emailBody = emailBody.concat("<br>&nbsp;&nbsp;- " +
-                    i.description.join(" ") + ": " +
-                    i.count + " шт | " +
-                    i.price + " грн/шт | <b>" +
-                    i.count * i.price + " грн</b>");
-            });
-            this.others.filter(i => i.count > 0).forEach(i => {
-                emailBody = emailBody.concat("<br>&nbsp;&nbsp;- " +
-                    i.description.join(" ") + ": " +
-                    i.count + " шт | " +
-                    i.price + " грн/шт | <b>" +
-                    i.count * i.price + " грн</b>");
-            });
-        }
-        emailBody = emailBody.concat("<h3>Ціна за пакувальні матеріали: <i>" + this.packagesPrice + " грн</i></h3>");
         emailBody = emailBody.concat("<h3>Ціна за місяць: <i>" + this.monthPay + " грн</i></h3>");
-        emailBody = emailBody.concat("<h3>Ціна за весь період (без матеріалів): <i>" + this.periodPay + " грн</i></h3>");
-        emailBody = emailBody.concat("<h3>Ціна за весь період (з матеріалами): <i>" + this.finalPrice + " грн</i></h3>");
+        emailBody = emailBody.concat("<h3>Ціна за весь період: <i>" + this.finalPrice + " грн</i></h3>");
         return emailBody;
     }
 

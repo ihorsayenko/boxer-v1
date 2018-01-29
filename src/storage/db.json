@@ -1,6 +1,6 @@
 {
-    "Temperature": 20,
-    "Humidity": 10,
+    "Temperature": 15,
+    "Humidity": 55,
 
     "Less60": 13.333,
     "More60": 10,
@@ -126,8 +126,8 @@
             },
             {
                 "id": "b_3",
-                "imgSrc": "../img/Packages/Boxes/box_390.png",
-                "description": ["Картонний короб", "260x320x240 мм"],
+                "imgSrc": "../img/Packages/Boxes/box_535.png",
+                "description": ["Картонний архівний короб", "260x320x240 мм"],
                 "price": 0,
                 "count": 0
             },
@@ -164,19 +164,12 @@
             {
                 "id": "ls_1",
                 "imgSrc": "../img/Packages/LocksAndShelves/lock_73.png",
-                "description": ["Замок навісний Apecs PD-01-50 ", "Розмір дужки: 50 мм.", "3 ключі"],
-                "price": 29,
-                "count": 0
-            },
-            {
-                "id": "ls_2",
-                "imgSrc": "../img/Packages/LocksAndShelves/lock_73.png",
                 "description": ["Замок навісний Apecs PD-01-50 ", "Розмір дужки: 55 мм.", "3 ключі"],
                 "price": 29,
                 "count": 0
             },
             {
-                "id": "ls_3",
+                "id": "ls_2",
                 "imgSrc": "../img/Packages/LocksAndShelves/shelves.png",
                 "description": ["Стелаж металевий з навантаженням", "до 120 кг на одну полицю", "Розміри (ВхШхГ) 1800х900х400 мм", "5 полиць", "оренда 1 місяць"],
                 "price": 0,
@@ -186,42 +179,42 @@
         "Packages": [{
                 "id": "p_1",
                 "imgSrc": "../img/Packages/Packages/200.png",
-                "description": ["Стрейч плівка", "Ширина 500 мм.", "Рулон 200 м", "Товщина 20 мкм"],
+                "description": ["Стрейч плівка"],
                 "price": 10,
                 "count": 0
             },
             {
                 "id": "p_2",
                 "imgSrc": "../img/Packages/Packages/110.png",
-                "description": ["Повітряно-пухирчата плівка", "Ширина 110 см.", "Рулон 20 м"],
+                "description": ["Повітряно-пухирчата плівка"],
                 "price": 18,
                 "count": 0
             },
             {
                 "id": "p_3",
                 "imgSrc": "../img/Packages/Packages/105.png",
-                "description": ["Мішок поліпропіленовий", "105х55 см"],
+                "description": ["Мішок поліпропіленовий"],
                 "price": 20,
                 "count": 0
             },
             {
                 "id": "p_4",
                 "imgSrc": "../img/Packages/Packages/100.png",
-                "description": ["Пакети для шин", "100х70 см"],
+                "description": ["Пакети для шин"],
                 "price": 29,
                 "count": 0
             },
             {
                 "id": "p_5",
                 "imgSrc": "../img/Packages/Packages/w_48.png",
-                "description": ["Скотч (прозорий)", "48мм х 100м"],
+                "description": ["Скотч (прозорий)"],
                 "price": 37,
                 "count": 0
             },
             {
                 "id": "p_6",
                 "imgSrc": "../img/Packages/Packages/b_48.png",
-                "description": ["Скотч (коричневий)", "48мм х 100м"],
+                "description": ["Скотч (коричневий)"],
                 "price": 53,
                 "count": 0
             }
@@ -229,14 +222,14 @@
         "Others": [{
                 "id": "o_1",
                 "imgSrc": "../img/Packages/Others/m.png",
-                "description": ["Маркер перманентний", "1-3 мм (чорний)"],
+                "description": ["Маркер перманентний"],
                 "price": 10,
                 "count": 0
             },
             {
                 "id": "o_2",
                 "imgSrc": "../img/Packages/Others/kn.png",
-                "description": ["Ніж канцелярский", "Лезо 12 мм"],
+                "description": ["Ніж канцелярский"],
                 "price": 18,
                 "count": 0
             },

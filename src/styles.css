@@ -428,8 +428,9 @@ input.undefined.ui-inputtext.ui-corner-all.ui-state-default.ui-widget.ui-state-f
 }
 
 .terms_btns button {
-    width: 80px;
-    margin-left: 10px !important;
+    width: 60px;
+    margin-left: 5px !important;
+    margin-top: 5px;
 }
 
 .terms_btns button,
@@ -452,7 +453,10 @@ input.undefined.ui-inputtext.ui-corner-all.ui-state-default.ui-widget.ui-state-f
     color: #ffffff !important;
 }
 
-.terms_btns,
+.terms_btns{
+    margin-top: 3em;
+}
+
 .booking {
     margin-top: 0.4em;
 }

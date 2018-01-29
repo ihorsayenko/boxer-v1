@@ -277,19 +277,22 @@
                   inputStyleClass='calendar_input'></p-calendar>
               </div>
             </div>
-            <div class="row">
-              <div class="text-center">
-                <p class='days_count'>{{daysCount >= 7 ? 'кількість днів: ' + daysCount: 'кількість днів'}}</p>
-                <br>
-                <div class="slider_days">
-                  <p-slider [(ngModel)]="daysCount" [min]='minSlide' [max]='maxSlide' [animate]='true' name='daysSlider' [step]="1" (onSlideEnd)='onSlideEnd()'></p-slider>
-                </div>
-              </div>
-            </div>
+            <div class="row"></div>
             <div class="row">
               <div #termsBtns id="termsBtns" class="btn-toolbar terms_btns">
-                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='less_2m' class="btn btn-default">до 2 міс</button>
-                <button type="button" (click)='onBtnTermClick($event.currentTarget)' id='more_2m' class="btn btn-default">від 2 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 7)' id='1w' class="btn btn-default">1 тиж</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 30)' id='1m' class="btn btn-default">1 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 60)' id='2m' class="btn btn-default">2 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 90)' id='3m' class="btn btn-default">3 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 120)' id='4m' class="btn btn-default">4 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 150)' id='5m' class="btn btn-default">5 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 180)' id='6m' class="btn btn-default">6 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 210)' id='7m' class="btn btn-default">7 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 240)' id='8m' class="btn btn-default">8 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 270)' id='9m' class="btn btn-default">9 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 300)' id='10m' class="btn btn-default">10 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 330)' id='11m' class="btn btn-default">11 міс</button>
+                <button type="button" (click)='onBtnTermClick($event.currentTarget, 365)' id='12m' class="btn btn-default">12 міс</button>
               </div>
             </div>
           </div>
@@ -301,7 +304,6 @@
             </div>
             <div class="row text-center prices_text">
               <p class="month_pay">ціна за місяць: {{monthPay}} грн</p>
-              <p class="period_pay">ціна за обраний період: {{periodPay}} грн</p>
             </div>
           </div>
         </div>
@@ -432,7 +434,7 @@
               <span class="your_booking_text furore_regular">Ваше замовлення</span>
               <div class="caviar_bold main_booking_section">
                 <div class="booking_desc">Термін зберігання
-                  <div class="circle_count badge">{{daysCount}} днів</div>
+                  <div class="circle_count badge">{{termStr}}</div>
                 </div>
                 <div class="booking_desc">Починаючи з
                   <span class="date_periods">&nbsp;{{dateFromStr}}&nbsp;</span> до
@@ -443,47 +445,7 @@
                     <sup>{{boxSizeStrM}}</sup>
                   </div>
                 </div>
-
-                <div *ngIf="showPackageMaterialsOnBooking" class="">
-                  <div class="booking_desc">Пакувальі матеріали:</div>
-                  <div class="booking_desc_items">
-                    <div *ngIf="countBoxes > 0">
-                      <span class="package_desc">
-                        Коробки &nbsp;
-                      </span>
-                      <div class="circle_count badge">{{countBoxes}}</div>
-                    </div>
-                    <div *ngIf="countLocksAndShelves > 0">
-                      <span class="package_desc">
-                        Замки/стелажі &nbsp;
-                      </span>
-                      <div class="circle_count badge">{{countLocksAndShelves}}</div>
-                    </div>
-                    <div *ngIf="countPackages > 0">
-                      <span class="package_desc">
-                        Плівки/пакети &nbsp;
-                      </span>
-                      <div class="circle_count badge">{{countPackages}}</div>
-                    </div>
-                    <div *ngIf="countOthers > 0">
-                      <span class="package_desc">
-                        Інші матеріали &nbsp;
-                      </span>
-                      <div class="circle_count badge">{{countOthers}}</div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
-          </div>
-          <div class="row text-right caviar_bold">
-            <div class="col-md-12 final_price_text">
-              <u>Загальна сума</u>
-            </div>
-          </div>
-          <div class="row text-right caviar_bold">
-            <div class="col-md-12 final_price">
-              {{finalPrice}}&nbsp;грн
             </div>
           </div>
           <div class="row">
@@ -495,169 +457,5 @@
       </div>
     </div>
 
-  </div>
-</div>
-
-<!-- Packages Modal -->
-<div id="packagesModal" class="modal fade packages_modal" role="dialog" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header furore_regular">
-        <span>пакувальні матеріали</span>
-        <button type="button" class="close" data-dismiss="modal" (click)="closePackageModal()">
-          <span class="close_btn">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body caviar_regular">
-        <div class="row">
-          <div class="package_tabs">
-            <ul class="nav nav-tabs">
-              <li role="presentation" class="active">
-                <a class="" href="#boxes" data-toggle="tab">коробки</a>
-              </li>
-              <li role="presentation" class="">
-                <a class="" href="#locksAndShelves" data-toggle="tab">замки/стелажі</a>
-              </li>
-              <li role="presentation" class="">
-                <a class="" href="#packages" data-toggle="tab">плівки/пакети</a>
-              </li>
-              <li role="presentation" class="">
-                <a class="" href="#others" data-toggle="tab">інші матеріали</a>
-              </li>
-            </ul>
-
-            <div class="tab-content clearfix caviar_bold">
-              <div class="tab-pane active" id='boxes'>
-                <ul class="list-group">
-                  <li [id]='item.id' class="list-group-item" *ngFor="let item of boxes;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                    <div class="row">
-                      <div class="col-md-3 text-center">
-                        <img class="package-img" [src]="item.imgSrc" alt="">
-                      </div>
-                      <div class="col-md-5 text-left">
-                        <ul class="package_desc">
-                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                            {{desc}}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 text-center inputs">
-                        <div class="counters input-group">
-                          <span class="input-group-btn">
-                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                          </span>
-                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                          <span class="input-group-btn">
-                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                          </span>
-                        </div>
-                        ціна: {{item.price}}&nbsp;грн
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane" id='locksAndShelves'>
-                <ul class="list-group">
-                  <li [id]='item.id' class="list-group-item" *ngFor="let item of locksAndShelves;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                    <div class="row">
-                      <div class="col-md-3 text-center">
-                        <img class="package-img" [src]="item.imgSrc" alt="">
-                      </div>
-                      <div class="col-md-5 text-left">
-                        <ul class="package_desc">
-                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                            {{desc}}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 text-center inputs">
-                        <div class="counters input-group">
-                          <span class="input-group-btn">
-                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                          </span>
-                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                          <span class="input-group-btn">
-                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                          </span>
-                        </div>
-                        ціна: {{item.price}}&nbsp;грн
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane" id='packages'>
-                <ul class="list-group">
-                  <li [id]='item.id' class="list-group-item" *ngFor="let item of packages;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                    <div class="row">
-                      <div class="col-md-3 text-center">
-                        <img class="package-img" [src]="item.imgSrc" alt="">
-                      </div>
-                      <div class="col-md-5 text-left">
-                        <ul class="package_desc">
-                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                            {{desc}}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 text-center inputs">
-                        <div class="counters input-group">
-                          <span class="input-group-btn">
-                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                          </span>
-                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                          <span class="input-group-btn">
-                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                          </span>
-                        </div>
-                        ціна: {{item.price}}&nbsp;грн
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-pane" id='others'>
-                <ul class="list-group">
-                  <li [id]='item.id' class="list-group-item" *ngFor="let item of others;let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even }">
-                    <div class="row">
-                      <div class="col-md-3 text-center">
-                        <img class="package-img" [src]="item.imgSrc" alt="">
-                      </div>
-                      <div class="col-md-5 text-left">
-                        <ul class="package_desc">
-                          <li [id]="'desc_' + i" class="" *ngFor='let desc of item.description; let i = index;'>
-                            {{desc}}
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="col-md-4 text-center inputs">
-                        <div class="counters input-group">
-                          <span class="input-group-btn">
-                            <button type="button" [disabled]="item.count <= 0 ? true: null" class="btn btn_minus" (click)="onCountMinus(item)">&#45;</button>
-                          </span>
-                          <input type="text" class="form-control text-center" [value]="item.count" readonly>
-                          <span class="input-group-btn">
-                            <button tepe="button" [disabled]="item.count >= maxPackageCount ? true: null" class="btn btn_plus" (click)="onCountPlus(item)">&#43;</button>
-                          </span>
-                        </div>
-                        ціна: {{item.price}}&nbsp;грн
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="booking_btn_wrapper text-center">
-            <button type="button" class="btn btn-default" (click)="bookPackages()" data-dismiss="modal">зберегти</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
